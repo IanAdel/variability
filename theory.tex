@@ -135,7 +135,7 @@ This increased variability has several important implications for sediment trans
   
   \begin{center}
     \begin{figure}[H]
-      \includegraphics[width=0.9\linewidth]{Cartoon.pdf}
+      \includegraphics[width=0.65\linewidth]{Cartoon.pdf}
       \caption{Cartoon of the situation with various parameters. Velocity $v_g$ and $v_f$ magnitude are shown by arrow length and marks at the channel boundary. $S_g$ and $S_f$ represent the cross-sectional area in glacial and fluvial channels.  Note that in the fluvial channel parameterization, rectangular channel shapes are implemented (Section~\ref{sect:fluv}).} 
       \label{fig:cartoon}
     \end{figure}
@@ -146,7 +146,8 @@ This increased variability has several important implications for sediment trans
   This section contains the relationships between water discharge, subglacial water velocity, and channel geometry in both fluvial and subglacial channels.
   Because sediment transport largely depends on shear stress \citep{shields1936}, both parameterizations calculated this value and integrate  it across the channel bed.
   The parameterizations evaluate shear stress, as opposed to sediment transport capacity, as shear stress omits a grain size parameter and the choice of a sediment transport relationship \citep{shields1936}.
-  
+
+  \ian{check units on fluvial channel factor}
   \begin{table}[H]
     \centering
     \caption{Variables, parameters, and constants }
@@ -189,7 +190,7 @@ This increased variability has several important implications for sediment trans
   \subsection{Subglacial channel  parameterization}
   \label{sect:sub_mode}
   To parameterize the shear stress of water flowing across sediments below a glacier, the subglacial channel parameterization evaluates the channel geometry and the velocity of the flowing water. 
-  To accomplish this, a version of hydraulics parameterization presented in \citet{delaney2019} is used.
+  To accomplish this, the hydraulics parameterization presented in \citet{delaney2019} is used.
   The parameterization uses the assumption that the water is transported through subglacial channels \citep[Figure~\ref{fig:cartoon}; ][]{rothlisberger1972}, and that a channel and geometry will respond to a representative water discharge over a certain time period $Q_{w}^*$, using the Darcy-Weisbach formulation for water-flow through a pipe to describe this relationship \citep[e.g.][]{rothlisberger1972,clarke2003,werder2013}.
   Here, it is assumed that the hydraulic diameter of the subglacial channel, $D_h$, responds to a representative water discharge, $Q_{w}^*$, and a representative gradient of the hydraulic potential, $\Psi^*$:
   \begin{linenomath*}
@@ -305,7 +306,7 @@ This increased variability has several important implications for sediment trans
   
   \begin{center}
     \begin{figure}[H]
-      \includegraphics[width=0.9\linewidth]{model_outputs.pdf}
+      \includegraphics[width=0.7\linewidth]{model_outputs.pdf}
       \caption{Response of channel width (a), hydraulic diameter (b),  Reynolds number  (c),  water velocity (d), shear-stress (e), and width-integrated shear-stress (f)  to different water discharge values. The glacial system is in blue and the fluvial system is in green.  Horizontal bars in d, e, and f represent the range of values in the  output. Gray space represents water discharge below the mean value. }
       \label{fig:model_outs}
     \end{figure}
@@ -325,7 +326,7 @@ This increased variability has several important implications for sediment trans
   
   \begin{center}
     \begin{figure}[H]
-      \includegraphics[width=0.9\linewidth]{multi_run.pdf}
+      \includegraphics[width=0.7\linewidth]{multi_run.pdf}
       \caption{Ratio of range of a variable $\Gamma$ for glacial and fluvial systems for water velocity  (a), shear-stress (b), and  width-integrated shear-stress (c) in response to mean water discharge,
         Range  $\chi$ for each variable is given in Equation~\ref{eq:var}. Values greater (less) than $1$ shown in white (gray) are parameter combinations that vary more in a subglacial (fluvial) system. Plots (d-f) show the response of variable $\Gamma$ to the variability in water discharge ($\chi(Q_w)$) in the parameter combination. 
         Histograms (g-i) show the frequency of relative variations across variables in the parameterization.}
@@ -416,11 +417,11 @@ This increased variability has several important implications for sediment trans
   The variability in shear stress is reduced when the evolving channel width is accounted for in fluvial systems.
   Even so, variability in shear stress across a channel's width is still higher in subglacial channels, compared to fluvial ones.
   
-  These different characteristics between glacial and fluvial channels show that records of sediment transport downstream of glaciers capture multiple processes together.
-  Such processes may compound at glacier margins, where water flow transitions from pressurized subglacial flow to open-channel flow.
-  The inconsistent response of subglacial and fluvial systems to water discharge could add  noise to sediment transport signals in glacial systems compared to fluvial ones.
-  In addition, variations in sediment transport capacity in glacier systems respond to a large number of factors such as channel size, ice thickness, and glacier surface slope, which may react to climate forcing differently than water discharge alone. 
-  The differences in the systems' response to changing water discharge should be considered when examining sediment transport processes in glacierized catchments.
+  These different characteristics between glacial and fluvial channels show that records of sediment transport downstream of glaciers capture multiple fluvial processes together.
+  Such processes might be particularly relevant at glacier margins, where water transitions from pressurized subglacial flow to open-channel flow.
+  The inconsistent response of sediment transport in subglacial and fluvial systems to changing water discharge could add noise to sediment transport signals between the systems.
+  In addition, the subglacial parameterization shows that variations in sediment transport capacity in glacier systems respond to a large number of factors such as channel size, ice thickness, and glacier surface slope, which may react to climate forcing differently than water discharge alone. 
+  The differences in fluvial and subglacial channels' response to changing water discharge should be considered when examining sediment transport processes in glacierized catchments.
   
   \section{Acknowledgments}
   
@@ -438,8 +439,8 @@ This increased variability has several important implications for sediment trans
 
 \begin{center}
   \begin{figure}[H]
-    \includegraphics[width=0.9\linewidth]{multi_run_vars.pdf}
-    \caption{Variability $\chi$ in velocity ($v_g$, $v_f$; a) shear stress ($\tau_g$, $\tau_f$; b) and width-integrated shear stress ($\tau_{tg}$, $\tau_{tf}$; b)  in glacial and fluvial systems. }
+    \includegraphics[width=0.7\linewidth]{multi_run_vars.pdf}
+    \caption{Variability $\chi$ in velocity ($v_g$, $v_f$; a) shear stress ($\tau_g$, $\tau_f$; b) and width-integrated shear stress ($\tau_{tg}$, $\tau_{tf}$; c)  in glacial and fluvial systems. }
     \label{fig:gammas}
   \end{figure}
 \end{center}

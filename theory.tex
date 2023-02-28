@@ -259,11 +259,19 @@ This increased variability has several important implications for sediment trans
     w_{cf} = k \, Q_w^e,
   \end{equation}
   % 
-  where $k$ is a constant and $e$ is an exponent commonly equal to $\frac{1}{2}$ \citep{leopold1953}. Cross-sectional area is 
+  where $k$ is a constant and $e$ is an exponent commonly equal to $\frac{1}{2}$ \citep{leopold1953}.
+  Cross-sectional area, $ S_f$, is 
   \begin{equation}
     \label{eq:Sf}
-    S_f= \frac{Q_w}{v_f}.
+    S_f = \frac{Q_w}{v_f},
   \end{equation}
+  %
+  where $v_f$ is water velocity, given by rearranging Equation \ref{eq:tau} as
+ \begin{equation}
+    \label{eq:vf}
+    v_f = \sqrt{\frac{8\,\tau_f}{f_p\,\rho_w}}.
+  \end{equation}
+  %
   As in Section~\ref{sect:sub_mode}, the width integrated shear stress is $\tau_{tf}=w_{cf}\,\tau_f$.
   Hydraulic diameter of the channel is given by $D_{hf} = \frac{4\,w_{cf}\,d}{2\,d+w_{cf}}$, with flow depth $d$ determined from knowledge of $S_f$ and $w_{cf}$ in a rectangular channel.
   

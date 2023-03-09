@@ -133,9 +133,9 @@ This increased variability in sediment transport capacity in subglacial systems,
     \end{equation}
   \end{linenomath*}
   % 
-  where $Q_w$ is water discharge,  and the denominator is the channel's cross sectional area $S$.
+  where $Q_w$ is water discharge,  and the denominator is the channel's cross-sectional area $S$.
 
-  In subaerial channels,with open channel flow, the cross sectional area $S$ of the channel evolves with changing water discharge $Q_w$  by changing the width of the channel along with the depth \citep{leopold1953}. During a flood with greater water discharge $Q_w$, for instance, the cross sectional area $S$ increases as the channel widens and deepens, along with water velocity $v$. As a result, the shear stress across the channel $\tau_t$ will increase in response to both the channel width  and water velocity $v$. 
+  In subaerial channels, with open channel flow, the cross-sectional area $S$ of the channel evolves with changing water discharge $Q_w$  by changing the width of the channel along with the depth \citep{leopold1953}. During a flood with greater water discharge $Q_w$, for instance, the cross-sectional area $S$ increases as the channel widens and deepens, along with water velocity $v$. As a result, the shear stress across the channel $\tau_t$ will increase in response to both the channel width  and water velocity $v$. 
 
   Yet, the response of water velocity to changing water discharge in subglacial channels is different than subaerial ones.
   In subglacial systems, the water is pressurized by the ice above \citep{shreve1972}.
@@ -168,9 +168,9 @@ This increased variability in sediment transport capacity in subglacial systems,
   
   \section{Methods}
   \label{sect:meth}
-  Relationships among water discharge, subglacial water velocity, and channel geometry in both subaerial and subglacial channels (Table \ref{table:vpm}) are described with subglacial and subaerial parameterizations.
+    Parameterizations below represent relationships among water discharge, subglacial water velocity, and channel geometry in both subaerial and subglacial channels (Table \ref{table:vpm}).
   Because sediment transport largely depends on shear stress applied by water flow \citep{shields1936}, both parameterizations calculate this value and integrate  it across the channel bed (Fig. \ref{fig:cartoon}).
-  The evaluation of shear stress  omits a grain size parameter and, thus, leaves open the selection of a sediment transport relationship  \citep{shields1936} and thus the calculation of sediment transport capacity.
+  The evaluation of shear stress  omits a grain size parameter and, thus, leaves open the selection of a sediment transport relationship  \citep[e.g.][]{shields1936,meyer1948} to  calculate sediment transport capacity.
 
   \begin{table}[H]
     \centering
@@ -212,8 +212,10 @@ This increased variability in sediment transport capacity in subglacial systems,
   
   \subsection{Subglacial channel  parameterization}
   \label{sect:sub_mode}
-  To parameterize the shear stress of water flowing across sediments below a glacier, the subglacial channel parameterization evaluates the channel geometry and the velocity of the flowing water. 
-  To accomplish this, the hydraulics parameterization presented in \citet{delaney2019} is used. Here, it is assumed that the water is transported through subglacial channels \citep[Figure~\ref{fig:cartoon}; ][]{rothlisberger1972}, and that the channel  and geometry will respond to a representative water discharge over a certain time period $Q_{w}^*$, using the Darcy-Weisbach formulation for water-flow through a pipe  \citep[e.g.][]{rothlisberger1972,clarke2003,werder2013}.
+  To evaluate the shear stress of water flowing across sediments below a glacier, the subglacial channel parameterization evaluates the channel geometry and the velocity of the flowing water.
+  To accomplish this, the hydraulics model presented in \citet{delaney2019} is used.
+  
+  Here, it is assumed that the water is transported through subglacial channels \citep[Figure~\ref{fig:cartoon}; ][]{rothlisberger1972}, and that the channel  and geometry will respond to a representative water discharge over a certain time period $Q_{w}^*$, using the Darcy-Weisbach formulation for water-flow through a pipe  \citep[e.g.][]{rothlisberger1972,clarke2003,werder2013}.
   Thus, the hydraulic diameter of the subglacial channel, $D_h$, responds to a representative water discharge, $Q_{w}^*$, and a representative gradient of the hydraulic potential, $\Psi^*$ such that:
   \begin{linenomath*}
     \begin{equation}
@@ -238,7 +240,8 @@ This increased variability in sediment transport capacity in subglacial systems,
   \end{equation}
   where $\beta$ is the central angle of the circular segment that comprises the channel (the so-called Hooke angle). Note that $\beta =\pi$ corresponds to a semi-circle and
   smaller values of $\beta$ result in shallow, wide channels. 
-  The width of the flat channel floor $w_c$ , given $beta$ is   \begin{equation}
+  The width of the flat channel floor $w_c$, given angle $beta$ is 
+  \begin{equation}
     \label{eq:dh2wc}
     w_{cg} = 2  \sin \frac{\beta}{2} \sqrt{\frac{2\, S}{\beta -\sin \beta}},
   \end{equation}
@@ -448,8 +451,8 @@ This increased variability in sediment transport capacity in subglacial systems,
   These different characteristics between glacial and subaerial channels show that records of sediment transport downstream of glaciers capture both subglacial and subaerial processes together.
   Such processes might be particularly relevant at glacier margins, where water transitions from pressurized subglacial flow to open-channel subaerial flow.
   The inconsistent response of sediment transport in subglacial and subaerial systems to changing water discharge could add uncertainty in evaluating  sediment transport signals in subglacial systems.
-  In addition, the subglacial parameterization shows that sediment transport capacity in glacier systems respond to a large number of factors such as channel size, ice thickness, and glacier surface slope, which may react to climate forcing differently than water discharge alone. 
-  The differences in subglacial and subaerial channels' response to changing water discharge should be considered when examining sediment transport processes in glacierized catchments.
+  In addition, the subglacial parameterization shows that sediment transport capacity in glacier systems responds to a large number of factors such as channel size, ice thickness, and glacier surface slope, which may react to climate forcing differently than water discharge alone. 
+  The differences in subglacial and subaerial channels' response to changing hydrology should be considered when examining sediment transport processes in glacierized catchments.
   
   \section{Acknowledgments}
   

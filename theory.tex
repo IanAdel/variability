@@ -78,7 +78,7 @@
 
 \paragraph{Key findings:}
 \begin{enumerate}
-\item Variations in water discharge in subglacial systems are accommodated by water velocity of water, given the slow evolution of channel size.
+\item Water discharge variations in subglacial systems are accommodated by water velocity, not channel size, given the slow evolution of channels.
 
 \item  Greater variability in water velocity in subglacial systems causes sediment transport capacity to vary more compared to subaerial systems.
 
@@ -274,7 +274,7 @@ The increased variability in sediment transport capacity in subglacial systems, 
   \label{sect:fluv}
   
   To parameterize the shear stress of water flowing across sediments in the subaerial channel,  the hydraulics parameterization presented in \citet{tucker1997} is implemented.
-  Here, it is assumed that there is conservation of mass and a sufficiently wide channel so that the hydraulic radius is consistent with flow depth, uniform flow, and the Darcy-Weisbach relationship.
+  Here, it is assumed that there is a conservation of mass and a sufficiently wide channel so that the hydraulic radius is consistent with flow depth, uniform flow, and the Darcy-Weisbach relationship.
   The shear stress $\tau_f$ at the river bed is represented as
   \begin{linenomath*}
     \begin{equation}
@@ -357,8 +357,8 @@ The increased variability in sediment transport capacity in subglacial systems, 
   \begin{center}
     \begin{figure}[H]
       \includegraphics[width=0.7\linewidth]{multi_run.pdf}
-      \caption{Ratio of range of a variable $\Gamma$ for glacial and subaerial systems for water velocity  (a), shear-stress (b), and  width-integrated shear-stress (c) in response to mean water discharge,
-        Range  $\chi$ for each variable is given in Equation~\ref{eq:var}. Values greater (less) than $1$ shown in white (gray) are parameter combinations that vary more in a subglacial (subaerial) system. Plots (d-f) show the response of variable $\Gamma$ to the variability in water discharge ($\chi(Q_w)$) in the parameter combination. 
+      \caption{Ratio of range of water velocity, shear-stress, and width integrated shear-stress for glacial and subaerial systems in response to mean water discharge (a, b, c), and  variability in water discharge (d, e, f).  
+        Range  $\chi$ for each variable is given in Equation~\ref{eq:var}. Values greater than $1$ shown in white space are parameter combinations that vary more in a subglacial  system.
         Histograms (g-i) show the frequency of relative variations across variables in the parameterization.}
       \label{fig:range}
     \end{figure}
@@ -367,12 +367,12 @@ The increased variability in sediment transport capacity in subglacial systems, 
   Across the accepted model runs, variability in water velocity and shear stress remains substantially higher across the subglacial model compared to subaerial ones (Figure~\ref{fig:range}).
   Water velocity, shear stress, and width-integrated shear stress all have a variability ratio ($\frac{\chi(\Gamma_{g})}{\chi(\Gamma_f)}$) greater than $1$ in the subglacial  system compared to subaerial one (Figure~S1).
   
-  The minimum ratio of  water velocity, $\frac{\chi(v_{g})}{\chi(v_{f})}$, and shear-stress, $\frac{\chi(\tau_{g})}{\chi(\tau_{f})}$, is around $2$, showing that these factors are substantially more variable in subglacial channels compared to subaerial ones.
-  The width integrated shear stress, $\frac{\chi(\tau_{tg})}{\chi( \tau_{tf})}$, spans between $1.02$ and $2.4$ because changing channel width accommodates the reduced shear stress in the subaerial system.
+  The minimum ratio of  water velocity, $\frac{\chi(v_{g})}{\chi(v_{f})}$, and shear-stress, $\frac{\chi(\tau_{g})}{\chi(\tau_{f})}$, is around $2$, showing that these factors are substantially more variable in subglacial channels compared to subaerial ones (Figure~\ref{fig:range} g, h).
+  The width integrated shear stress, $\frac{\chi(\tau_{tg})}{\chi( \tau_{tf})}$, spans between $1.02$ and $2.4$ because changing channel width accommodates some of the reduced shear stress variability in subaerial systems (Figure~\ref{fig:range} i).
   No runs experienced width integrated shear stress, $\frac{\chi(\tau_{tg})}{\chi( \tau_{tf})}$, less than $1$.
   
   Runs with the smallest variability in discharge ($\chi(Q_w)$) have the greatest variability in water velocity, shear stress, and width-integrated shear stress in subglacial systems compared to subaerial ones (Figure~\ref{fig:range} and S1).
-  Yet, the greatest difference in the two systems at the smallest variations of water discharge still results in greater variability in the subglacial system compared to the subaerial one (Figure S1). 
+  Yet, the greatest difference in the two systems at the smallest variations of water discharge still results in greater variability in the subglacial system compared to the subaerial one (Figure \ref{fig:range}). 
 
   
   \section{Discussion}

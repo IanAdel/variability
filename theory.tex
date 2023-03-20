@@ -221,7 +221,7 @@ The increased variability in sediment transport capacity in subglacial systems, 
   To evaluate the shear stress of water flowing across sediments below a glacier, the subglacial channel parameterization evaluates the channel geometry and the velocity of the flowing water.
   To accomplish this, the hydraulics model presented in \citet{delaney2019} is used.
   
-  Here, it is assumed that the water is transported through subglacial channels \citep[Figure~\ref{fig:cartoon}; ][]{rothlisberger1972}, and that the channel  and geometry will respond to a representative water discharge over a certain time period $Q_{w}^*$, using the Darcy-Weisbach formulation for water-flow through a pipe  \citep[e.g.][]{rothlisberger1972,clarke2003,werder2013}.
+  Here, it is assumed that the water is transported through subglacial channels \citep[Figure~\ref{fig:cartoon}; ][]{rothlisberger1972}, and that the channel  geometry will respond to a representative water discharge over a certain time period $Q_{w}^*$, using the Darcy-Weisbach formulation for water-flow through a pipe  \citep[e.g.][]{rothlisberger1972,clarke2003,werder2013}.
   Thus, the hydraulic diameter of the subglacial channel, $D_h$, responds to a representative water discharge, $Q_{w}^*$, and a representative gradient of the hydraulic potential, $\Psi^*$ such that:
   \begin{linenomath*}
     \begin{equation}
@@ -310,7 +310,7 @@ The increased variability in sediment transport capacity in subglacial systems, 
   The formulation of the glacial system (Section~\ref{sect:sub_mode}) requires inputs of the hydraulic gradient (Equation \ref{eq:psi}; $\frac{\partial z_{sg}}{\partial x}$, $\frac{\partial z_{c}}{\partial x}$), water discharge, $Q_w$ representative water discharge, $Q_w^*$,  Hooke angle (Equation~\ref{eq:Hf}; $\beta$), and friction factor (Equation~\ref{eq:DW}; $f_r$).
 
   
-  In the subaerial system, the water is not pressurized, so only the bed slope, $\frac{\partial z_c}{\partial x}$, is needed in Equation~\ref{eq:DW_tau}. The friction factor, $f_f$, and channel shape factor, $k$, are assigned such that they produce reasonable values for water velocity and channel width  (Section~\ref{sect:fluv}).
+  In the subaerial system,  only the bed slope, $\frac{\partial z_c}{\partial x}$, is needed in Equation~\ref{eq:DW_tau}. The friction factor, $f_f$, and channel shape factor, $k$, are assigned such that they produce reasonable values for water velocity and channel width  (Section~\ref{sect:fluv}).
   
   The Reynolds number $R_e$, which gives an evaluation of the degree of turbulence of the water, is given as 
   \begin{equation}
@@ -376,21 +376,7 @@ The increased variability in sediment transport capacity in subglacial systems, 
 
   
   \section{Discussion}
-  \subsection{Assumptions}
-  
- 
-  The subglacial parameterization assumes that subglacial water is pressurized, which is a commonly held assumption in subglacial hydrology, though observations suggest that this may not always be the case \citep[e.g.][]{gimbert2016}.
-  The subglacial channel geometry need not be in equilibrium with the hydrological conditions for the water to remain pressurized.
-  Yet the subglacial parameterization assumes that the channel geometry must vary minimally over the timescales of varying  water discharge \citep[e.g.][]{nanni2020}.
-  
-  In R-channel formulations, peaks in the hydrograph could cause additional opening of the conduit due to pressure melt, thus causing a decrease in velocity compared to the results here \citep{rothlisberger1972}.
-  A similar effect could occur with creep closure of the subglacial channel at the hydrograph minima.
-  Additionally, at high water pressures, glacier uplift and bed separation \citep{andrews2014} might modify the width of the subglacial channel. 
 
-  Both subglacial and subaerial parameterizations here assume that the distribution of velocity and shear stress of water across the channel bed is homogeneous \citep[Section~\ref{sect:sub_mode}~and~\ref{sect:fluv}][]{yager2018}. 
-  The subaerial parameterization assumes that sediment is transported across all channel widths, as opposed to large flows such as floods when much sediment transport occurs \citep{wolman1960}.
-  As a result, the variability in the subaerial system across the range of discharge values could be underestimated in the parameterization (Figure~\ref{fig:range}).
- 
   \subsection{Geomorphic Implications}
   \label{sect:GI}
   The relationship between water discharge variability and relative variability of the water velocity, shear stress, and width-integrated shear stress results from the fixed geometry in the glacier system and variable geometry in the subaerial system as they respond to changes in water discharge (Equations~\ref{eq:tau_t} and \ref{eq:v}).
@@ -399,6 +385,12 @@ The increased variability in sediment transport capacity in subglacial systems, 
   In the total sediment transport relationship \citet{engelund1967}, the shear stress is scaled to $\frac{5}{2}$ power.
   In both cases, the exponent greater than $1$ of shear stress in the sediment transport relationship magnifies the variability in sediment transport beyond the highly variable shear stress and width-integrated shear stress described above in subglacial environments (Figure~\ref{fig:model_outs}\, b and d; Figure~S1).
 
+
+  Both subglacial and subaerial parameterizations here assume that the distribution of velocity and shear stress of water across the channel bed is homogeneous \citep[Section~\ref{sect:sub_mode}~and~\ref{sect:fluv}][]{yager2018}. 
+  The subaerial parameterization assumes that sediment is transported across all channel widths, as opposed to large flows such as floods when much sediment transport occurs \citep{wolman1960}.
+  As a result, the variability in the subaerial system across the range of discharge values could be underestimated in the parameterization (Figure~\ref{fig:range}).
+
+  
   
   \subsubsection{Sediment transport below glaciers and at their margins}
   
@@ -496,3 +488,18 @@ Furthermore, if no sediment is available and the glacier is in a supply-limited 
 % LocalWords:  fischer zekollari clarke raymond larour delaneyinprep
 % LocalWords:  guillon exner wolman engelund Weisbach
 
+  Both subglacial and subaerial parameterizations here assume that the distribution of velocity and shear stress of water across the channel bed is homogeneous \citep[Section~\ref{sect:sub_mode}~and~\ref{sect:fluv}][]{yager2018}. 
+  The subaerial parameterization assumes that sediment is transported across all channel widths, as opposed to large flows such as floods when much sediment transport occurs \citep{wolman1960}.
+  As a result, the variability in the subaerial system across the range of discharge values could be underestimated in the parameterization (Figure~\ref{fig:range}).
+
+
+  \subsection{Assumptions}
+  
+ 
+  The subglacial parameterization assumes that subglacial water is pressurized, which is a commonly held assumption in subglacial hydrology, though observations suggest that this may not always be the case \citep[e.g.][]{gimbert2016}.
+  The subglacial channel geometry need not be in equilibrium with the hydrological conditions for the water to remain pressurized.
+  Yet the subglacial parameterization assumes that the channel geometry must vary minimally over the timescales of varying  water discharge \citep[e.g.][]{nanni2020}.
+  
+
+
+ 

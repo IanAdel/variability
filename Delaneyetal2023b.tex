@@ -14,6 +14,7 @@
 \documentclass[draft]{agujournal2019}
 \usepackage{url} %this package should fix any errors with URLs in refs.
 \usepackage{lineno}
+\usepackage{placeins}
 \usepackage[inline]{trackchanges} %for better track changes. finalnew option will compile document with changes incorporated.
 \usepackage{soul}
 \linenumbers
@@ -495,13 +496,12 @@ We thank G. King for commenting on a previous version of this manuscript.
 
 
 \end{table}
-
-\newpage
+\FloatBarrier
 
 \section{Figure 3 over various time aggregations}
 
 \begin{center}
-  \begin{figure}[h]
+  \begin{figure}[!h]
     \includegraphics[width=0.7\linewidth]{Fig3_hr.png}
     \caption{As Figure \ref{fig:model_outs}, with $1$ \,\unit{hr} aggregation.}
     \label{fig:model_outs_1hr}
@@ -509,7 +509,7 @@ We thank G. King for commenting on a previous version of this manuscript.
 \end{center}
 
 \begin{center}
-  \begin{figure}[h]
+  \begin{figure}[!h]
     \includegraphics[width=0.7\linewidth]{Fig3_12hr.png}
     \caption{As Figure \ref{fig:model_outs}, with $12$ \,\unit{hr} aggregation.}
     \label{fig:model_outs_12hr}
@@ -518,7 +518,7 @@ We thank G. King for commenting on a previous version of this manuscript.
 
 
 \begin{center}
-  \begin{figure}[h]
+  \begin{figure}[!h]
     \includegraphics[width=0.7\linewidth]{Fig3_1day.png}
     \caption{As Figure \ref{fig:model_outs}, with $1$ \,\unit{day} aggregation.}
     \label{fig:model_outs_1day}
@@ -527,7 +527,7 @@ We thank G. King for commenting on a previous version of this manuscript.
 
 
 \begin{center}
-  \begin{figure}[h]
+  \begin{figure}[!h]
     \includegraphics[width=0.7\linewidth]{Fig3_5day.png}
     \caption{As Figure \ref{fig:model_outs}, with $5$ \,\unit{day} aggregation.}
     \label{fig:model_outs_5day}
@@ -535,21 +535,21 @@ We thank G. King for commenting on a previous version of this manuscript.
 \end{center}
 
 \begin{center}
-  \begin{figure}[h]
+  \begin{figure}[!h]
     \includegraphics[width=0.7\linewidth]{Fig3_10day.png}
     \caption{As Figure \ref{fig:model_outs}, with $10$ \,\unit{day} aggregation.}
     \label{fig:model_outs_10day}
   \end{figure}
 \end{center}
 \begin{center}
-  \begin{figure}[h]
+  \begin{figure}[!h]
     \includegraphics[width=0.7\linewidth]{Fig3_15day.png}
     \caption{As Figure \ref{fig:model_outs}, with $15$ \,\unit{day} aggregation.}
     \label{fig:model_outs_15day}
   \end{figure}
 \end{center}
+\FloatBarrier
 
-\newpage
 
 \section{Mauro's bit about shear stress}
 % If you get an error about an unknown bounding box, try specifying the width and height of the figure with the natwidth and natheight options. This is common when trying to add a PDF figure without pdflatex.

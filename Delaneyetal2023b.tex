@@ -300,7 +300,7 @@ Following the parameterizations defined in Sections~\ref{sect:sub_mode}~and~\ref
 Over the course of the season, large peaks in water velocity and shear stress, along with width-integrated shear stress, occur in response to increases in water discharge in both \alpine{} and \icesheet{}.
 This occurs as the subglacial values are generally larger than the subaerial values, thus more efficient at transporting sediment.
 In the subglacial channel, peaks generally occur over the period when water discharge increases at the fastest rate (Figure~\ref{fig:model_outs}).
-Conversely, in the subaerial channel, peaks in these sediment transport variables occur when water discharge is highest.
+Alternatively, in the subaerial channel, peaks in these sediment transport variables occur when water discharge is highest.
 The timing of the greatest rate of change in water discharge occurs before the peaks in water discharge.
 Here, sediment could be deposited in the proglacial area as the water depressurizes, then remobilized when sediment transport capacity peaks in the subaerial system.
 
@@ -317,7 +317,7 @@ Here, sediment could be deposited in the proglacial area as the water depressuri
 \end{figure}
 
 Each water discharge value in the subaerial channel results in a unique water velocity, shear stress, and width-integrated shear stress, creating a perfect rank correlation between the variables (Figure~\ref{fig:Qw_vari} a--f).
-Conversely in the subglacial channel,  water velocity, shear stress, and width-integrated shear stress can vary substantially for a given water discharge and width-integrated shear stress varies with respect to the other two  outputs as well (Figure~\ref{fig:Qw_vari} a--f).
+In the subglacial channel, however,  water velocity, shear stress, and width-integrated shear stress can vary substantially for a given water discharge and width-integrated shear stress varies with respect to the other two  outputs as well (Figure~\ref{fig:Qw_vari} a--f).
 For instance, very high  water velocity values and shear stresses can occur across minimal water discharge at $2.5$\,\unit{m}$^3$\,\unit{s}$^{-1}$ to the maximum water discharge at over $17$ \,\unit{m}$^3$\,\unit{s}$^{-1}$.
 In \icesheet, mean values of water velocity can occur at water discharges between roughly $150$ \,\unit{m}$^3$\,\unit{s}$^{-1}$ and $310$ \,\unit{m}$^3$\,\unit{s}$^{-1}$, effectively spanning much of the water discharge range (Figure~\ref{fig:Qw_vari} d--f).
 
@@ -342,7 +342,7 @@ Yet, a range of width-integrated shear stress can occur at a given discharge.
 The second application examines the impact of a variety of channel shapes and friction factors on the relationship between water discharge and sediment transport capacity, in both systems.
 Across the range of parameter values examined, variability in water velocity and shear stress remains higher in the subglacial system compared to the subaerial one.
 However, in \alpine{}, the variability in width-integrated shear stress is comparable between the two systems, due to the variable water discharge (Figure~\ref{fig:multi_run}).
-Conversely, in \icesheet{}, with lower water discharge variability, the variability in width-integrated shear stress remains higher in the subglacial system across the time aggregation periods.
+ However, in \icesheet{}, with lower water discharge variability, the variability in width-integrated shear stress remains higher in the subglacial system across the time aggregation periods.
 
 It is prescient to evaluate the time scales over which the subglacial channels may respond to changing water discharge to understand the influence of variability in sediment transport capacity.
 In both cases, the variability in velocity, shear stress, and width-integrated shear stress decrease after $1-5$ day aggregations (Figure~\ref{fig:multi_run}).
@@ -366,12 +366,12 @@ Note that sediment transport relationships describe sediment flux per unit width
 Note also that both subglacial and subaerial parameterizations here assume that the distribution of velocity and shear stress is homogeneous across the channel bed, despite the limitations of this assumption \cite<e.g.>{yager2018}.
 
 The rapid increases and decreases in subglacial sediment transport capacity may compound the variability in sediment transport already present in subaerial systems \cite<Figure~\ref{fig:Qw_vari}; >{williams1989,jerolmack2010}.
-By applying the discharge - width scaling in Equation~\ref{eq:wcf} to Equation~\ref{eq:v}, by setting $S\, \propto \,Q^{\frac{1}{2}}$, the subaerial channel's width-integrated shear stress response is $\tau_{tf}\, \propto\,  Q$. 
+By applying the discharge - width scaling in Equation~\ref{eq:wcf} to Equation~\ref{eq:v}, by setting $S\, \propto \,Q^{\frac{1}{2}}$, the subaerial channel's width-integrated shear stress response is $\tau_{tf}\, \propto\,  Q$ (see \ref{sect:scaling}). 
 For sufficiently short time periods,  channel width and wetted area are fixed in the subglacial system so that the response of width-integrated shear stress is $ \tau_{tg}\, \propto\,  Q^{2}$, with a larger exponent on $Q$ than in the subaerial case following \citeA{alley1997}.
 In this case, water discharge fluctuates at a shorter timescale than the subglacial channel evolution \cite{gimbert2016}.
 Note also that the subglacial width integrated shear stress response to water discharge will be greater than the subaerial's provided that  Equation~\ref{eq:wcf}'s exponent is below one.
 However, when subglacial channel size lies in equilibrium with water discharge, the  width-integrated shear stress response is $\tau_{tg}\, \propto \, Q^{\frac{4}{5}}$, similar to subaerial channels.
-It follows that, the stronger correlation between hydraulics and water discharge in \icesheet{} could result from being closer to this equilibrium between variations in the channels wetter area and water discharge compared to \alpine{}.
+It follows that the stronger correlation between hydraulics and water discharge in \icesheet{} could result from being closer to this equilibrium between variations in the channels' wetter area and water discharge compared to \alpine{}.
 This state could result from the reduced diurnal discharge amplitude in \icesheet{} (Figures~\ref{fig:model_outs} and ~\ref{fig:Qw_vari}).
 In both cases, hydraulics could trend toward this equilibrium regime when average discharge over $1-5$ days when variability in subglacial channels  approaches that of subaerial channels (Figure~\ref{fig:multi_run}).
 
@@ -441,7 +441,7 @@ Code and data will be uploaded to a permanent repository, with FAIR principles, 
 \acknowledgments
 
 SNSF Project No. PZ00P2\_202024 provided  funding for I. Delaney.
-We thank G. King for commenting on a previous version of this manuscript.
+G. King provided useful comments on a previous version of this manuscript.
 
 
 \bibliography{PaperLib}
@@ -555,6 +555,7 @@ We thank G. King for commenting on a previous version of this manuscript.
 
 \newpage
 \section{Mauro's bit about shear stress}
+\label{sect:scaling}
 % If you get an error about an unknown bounding box, try specifying the width and height of the figure with the natwidth and natheight options. This is common when trying to add a PDF figure without pdflatex.
 % \begin{figure}
 % \noindent\includegraphics[natwidth=800px,natheight=600px]{samplefigure.pdf}

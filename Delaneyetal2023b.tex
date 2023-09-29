@@ -8,13 +8,15 @@
 % You may copy this file and give it your
 % article name, and enter your text.
 %
-% guidelines and troubleshooting are here: 
+% guidelines and troubleshooting are here:
 
 %% To submit your paper:
 \documentclass[draft]{agujournal2019}
 \usepackage{url} %this package should fix any errors with URLs in refs.
 \usepackage{lineno}
 \usepackage{placeins}
+\usepackage{amsmath}
+
 \usepackage[inline]{trackchanges} %for better track changes. finalnew option will compile document with changes incorporated.
 \usepackage{soul}
 \linenumbers
@@ -57,7 +59,7 @@
 
 
 \authors{Ian Delaney\affil{1},  Andrew J. Tedstone\affil{2},   Mauro A. Werder\affil{3,4},  Daniel Farinotti\affil{3,4}, }
-  
+
 \affiliation{1}{Institut des dynamiques de la surface terrestre (IDYST), Universit\'{e} de Lausanne, B\^{a}timent G\'{e}opolis, 1015 Lausanne, Switzerland}
 \affiliation{2}{Department of Geosciences, University of Fribourg, Ch. du Musée 1700, Fribourg, Switzerland}
 \affiliation{3}{Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH-Z\"urich, H\"onggerbergring 26, 8093 89 Z\"urich, Switzerland}
@@ -103,14 +105,14 @@ The shear stress  across the channel width $\tau_t$ responds to the velocity of 
   \end{equation}
 \end{linenomath*}
 %
-where $w_c$ is the width of the channel. Following mass conservation, the velocity of the water flowing through a  channel is 
+where $w_c$ is the width of the channel. Following mass conservation, the velocity of the water flowing through a  channel is
 \begin{linenomath*}
   \begin{equation}
     \label{eq:v}
     v = \frac{Q}{S},
   \end{equation}
 \end{linenomath*}
-where $Q$ is water discharge,  and $S$ is the channel's wetted area. 
+where $Q$ is water discharge,  and $S$ is the channel's wetted area.
 
 In subaerial channels, operating with open channel flow, the wetted area $S$ of the channel evolves with changing water discharge $Q$, by changing both the channel's width and the water depth \cite{leopold1953}.  The change in water depth results in a commensurate increase in water velocity.  Thus,  fulfilling Equation~\ref {eq:v}, the higher discharge is accommodated by both an increase in wetted area and flow velocity. As a result, the shear stress across the channel $\tau_t$ increases according to Equation~\ref{eq:tau_t}.
 
@@ -155,7 +157,7 @@ See \citeA{felix2022} and \citeA{felix2021} for more details.
 The Leverett Glacier in Greenland (\icesheet) serves as the ice sheet setting.
 Water discharge and suspended sediment concentration data were collected roughly $2$\unit{km} downstream from the terminus between June and August/September 2009 to 2012 ($67^\circ\,03'\,5''$ N, $50^\circ\,12'\,59''$ W).
 Data is used from \citeA{tedstone2017} and \citeA{hawkings2014} at a $5$\,\unit{min} time interval from May 28, 2012 to August 8, 2012.
-Two gaps in suspended sediment data of roughly one day in length are interpolated across with a linear spline. 
+Two gaps in suspended sediment data of roughly one day in length are interpolated across with a linear spline.
 
 \section{Methods}
 \label{sect:meth}
@@ -257,7 +259,7 @@ As above, the width-integrated shear stress is
     \label{eq:tautf}
     \tau_{tf}=w_{cf}\,\tau_f.
   \end{equation}
-  
+
 \subsection{Implementation}
 \label{sect:imp}
 
@@ -369,7 +371,7 @@ Note also that both subglacial and subaerial parameterizations here assume that 
 
 \ian{Mauro: Can you double-check this?}
 The rapid increases and decreases in subglacial sediment transport capacity may compound the variability in sediment transport already present in subaerial systems \cite<Figure~\ref{fig:Qw_vari}; >{williams1989,jerolmack2010}.
-By applying the discharge - width scaling in Equation~\ref{eq:wcf} to Equation~\ref{eq:v}, by setting $S\, \propto \,Q^{\frac{1}{2}}$, the subaerial channel's width-integrated shear stress response is $\tau_{tf}\, \propto\,  Q$ (see \ref{sect:scaling}). 
+By applying the discharge - width scaling in Equation~\ref{eq:wcf} to Equation~\ref{eq:v}, by setting $S\, \propto \,Q^{\frac{1}{2}}$, the subaerial channel's width-integrated shear stress response is $\tau_{tf}\, \propto\,  Q$ (see \ref{sect:scaling}).
 For sufficiently short time periods,  channel width and wetted area are fixed in the subglacial system so that the response of width-integrated shear stress is $ \tau_{tg}\, \propto\,  Q^{2}$, with a larger exponent on $Q$ than in the subaerial case following \citeA{alley1997}.
 In this case, water discharge fluctuates at a shorter timescale than the subglacial channel evolution \cite{gimbert2016}.
 Note also that the subglacial width integrated shear stress response to water discharge will be greater than the subaerial's provided that  Equation~\ref{eq:wcf}'s exponent is below one.
@@ -393,7 +395,7 @@ Furthermore,  if a transport-limited regime persists at the glacier margin, then
 
 The consistent relationship between sediment discharge capacity and open channel flow conditions could be pronounced $\sim20$\,\unit{km} downstream of the Leverett site, where a strong correlation persists between sediment plume size and the river's water discharge into the Kangerlussuaq fjord \cite{mcgrath2010}.
 In contrast, in marine-terminating glacier catchments a less consistent relationship may occur between water discharge or melt extent and sediment plume size \cite{tedstone2012}.
-Here, ocean water pressurizes subglacial channels at the ice front \cite<e.g.>{how2017}, so the minimal correlation could result from the inconsistent relationship between subglacial sediment transport capacity and water discharge (Figure~\ref{fig:Qw_vari}). 
+Here, ocean water pressurizes subglacial channels at the ice front \cite<e.g.>{how2017}, so the minimal correlation could result from the inconsistent relationship between subglacial sediment transport capacity and water discharge (Figure~\ref{fig:Qw_vari}).
 
 Second, the sediment discharge records could represent processes such as increased sediment accessibility when melt extends up the glacier, thereby increasing sediment and water discharge \cite<e.g.>{vergara2022}.
 A supply-limited regime could well persist at many glaciers, because the sediment's threshold of motion can be reached more frequently and across a range of water discharges, compared to subaerial systems (Figure~\ref{fig:Qw_vari}).
@@ -416,7 +418,7 @@ Sediment transport capacity is largely driven by the shear stress of water flowi
 Subaerial channels  alter their channel width and water velocity immediately in response to changing water discharge.
 In contrast, pressurized subglacial channels largely accommodate changing water discharge by altering water velocity and shear stress, upon which sediment transport depends.
 In subglacial channels, water velocity responds quickly to changes in water discharge because their size generally evolves slowly compared to variations in water discharge.
-This makes the response of sediment transport capacity much more sensitive to changes in water discharge when compared to subaerial channels. 
+This makes the response of sediment transport capacity much more sensitive to changes in water discharge when compared to subaerial channels.
 Despite these differences, parameterizations of subaerial hydraulics in two glacierized catchments generally represent observed sediment discharge variations better than subglacial hydraulics.
 
 
@@ -434,7 +436,7 @@ I.D. designed the study, developed, designed, and implemented the model and expe
 A.J.T. helped interpret data from Leverett Glacier and provided guidance on experiment design.
 M.A.W. provided data from Fieschergletscher and added the relationship between shear stress and water discharge (see Section~\ref{sect:dis_qsc} and \ref{sect:scaling}).
 D.F. provided data from Fieschergletscher.
-All authors provided  key inputs in writing and editing the manuscript. 
+All authors provided  key inputs in writing and editing the manuscript.
 
 
 \section*{Open Research Section}
@@ -456,7 +458,7 @@ G. King provided useful comments on a previous version of this manuscript.
 \section{Table of variables, parameters and constants}
 \begin{table}[h]
   \centering
-  \caption{Variables, parameters, and constants used in this work. 
+  \caption{Variables, parameters, and constants used in this work.
     Where two values are given, the first refers to  \alpine{}, a case from Fieschergletscher, and the second to a glacier marginal to the \icesheet{} a case from Leverett Glacier}
   \begin{tabular}{ l  c  c c }
     Name &Symbol&  Value&Units \\ \hline
@@ -467,7 +469,7 @@ G. King provided useful comments on a previous version of this manuscript.
     Hydraulic diameter &$D_h$&&$\mathrm{m}$\\
     Width of channel floor (glacial, subaerial) & $w_{cg},w_{cf}$&  & $\mathrm{m}$     \\
     Hydraulic head &$\Delta h$&& $\mathrm{m}$\\
-    Shear stress (glacier, subaerial) & $\tau_g,\,\tau_f$&& $\mathrm{Pa \, m^{-1}}$ \\
+    Shear stress (glacier, subaerial) & $\tau_g,\,\tau_f$&& $\mathrm{Pa \, m^{-2}}$ \\
     Width-integrated shear stress (glacier, subaerial) & $\tau_{tg},\, \tau_{tf}$&& $\mathrm{Pa \, m^{-1}}$ \\
 
          &&&\\
@@ -560,26 +562,78 @@ G. King provided useful comments on a previous version of this manuscript.
 \newpage
 \section{Mauro's bit about shear stress}
 \label{sect:scaling}
-% If you get an error about an unknown bounding box, try specifying the width and height of the figure with the natwidth and natheight options. This is common when trying to add a PDF figure without pdflatex.
-% \begin{figure}
-% \noindent\includegraphics[natwidth=800px,natheight=600px]{samplefigure.pdf}
-%\caption{caption}
-%\label{pdffiguresample}
-%\end{figure}
-%
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Optional Appendices go here
-%
-% The \appendix command resets counters and redefines section heads
-%
-% After typing \appendix
-%
-%\section{Here Is Appendix Title}
-% will show
-% A: Here Is Appendix Title
-%
-%\appendix
-%\section{Here is a sample appendix}
-\end{document}
 
+
+Here we look at three possibilities, namely, rivers, steady-state
+R-channels, and pipe-flow (i.e. R-channels which do not have time to
+adjust their size to discharge conditions).
+
+Basics of hydraulics
+\begin{equation}
+  \Psi \propto f\frac{v^2}{D}
+\end{equation}
+or
+\begin{equation}
+  \Psi \propto f\frac{Q^2}{D^5}.
+\end{equation}
+Then
+\begin{equation}
+  \tau \propto v^2 = (Q/S)^2.
+\end{equation}
+
+For all flow types we assume that the discharge $Q$ is given.
+A flow in a wide river has $\Psi$ constant (given by topography), $w \gg h$, and we assume the width can be approximated by a relation $w \propto Q^\alpha$ with $\alpha\in [0,1]$ and typically $\alpha \approx 1/2$.  A R-channel flow has $\Psi$ constant (approximated by the Shreve potential) and $S$ adjusts such that it is in steady state.  Pipe flow has $S$ fixed and $\Psi$ adjusts.
+
+Shear stresses are given by
+\begin{align}
+  \text{wide river} \quad\quad &  \tau \propto \left(\frac{Q}{w}\right)^{2/3} \Psi^{2/3}\\
+  \text{R-channel} \quad\quad & \tau =  \\
+  \text{pipe} \quad\quad &  \tau \propto v^2 \propto\\
+\end{align}
+
+Stream power are
+
+
+
+Basics on sediment transport
+\begin{align}
+  \text{MPM} \quad\quad & Q_s \propto w \tau^{3/2}\\
+  \text{EH}  \quad\quad& Q_s \propto w \tau^{5/2}\\
+  \text{Bagnold}  \quad\quad & Q_s \propto w (\Psi Q)^{3/2}
+\end{align}
+for conditions well above transport onset threshold.
+
+% \begin{tabular}{lll}
+%  & Shear stress & Stream power\\[0pt]
+%  & \(\tau \propto\) & \(\Omega \propto\)\\[0pt]
+% \hline
+% River & \(\big(\tfrac{Q}{w}\big)^{2/3} \Psi^{2/3}\) & \(Q \Psi\)\\[3pt]
+% R-channel & \(Q^{2/5} \, \Psi^{4/5}\) & \(Q \Psi\)\\
+% Pipe & \(Q^2\) & \(Q^3\)\\
+% \end{tabular}
+
+\noindent
+\begin{tabular}{llllll}
+Kind & Fixed & Determined via D-W & Additional relations & Shear stress & Stream p.\\[0pt]
+ &  &  &  & \(\tau \propto\) & \(\Omega \propto\)\\[0pt]
+\hline
+River & \(\Psi\) & \(H \propto (f \Psi^{-1} Q^{2-2\alpha})^{1/3}\) & \(w\propto Q^\alpha\), \(S=WH\), \(D_h=H\) & \(f^{1/3} Q^{2/3-2\alpha/3}  \Psi^{2/3}\) & \(Q \Psi\)\\[0pt]
+R-ch. & \(\Psi\) & \(S \propto (f \Psi^{-1} Q^2)^{2/5}\) & \(D_h\propto S^{1/2}\) & \(f^{1/5} Q^{2/5} \, \Psi^{4/5}\) & \(Q \Psi\)\\[0pt]
+Pipe & \(S\) & \(\Psi \propto f Q^2 S^{-5/2}\) & \(D_h\propto S^{1/2}\) & \(f Q^2 S^{-2}\) & \(f Q^3 S^{-5/2}\)\\[0pt]
+\end{tabular}
+
+\vspace{10mm}
+
+
+\noindent
+\begin{tabular}{llll}
+ & MPM & EH & Bagnold\\[0pt]
+\(Q_s \propto\) & \$W$\backslash$, \(\tau\)\textsuperscript{3/2} & \(W\, \tau^{5/2}\) & \(W\, \Omega^{3/2} H^{-2/3}\)\\[0pt]
+\hline
+River & \(f^{1/2}\, Q \, \Psi\) & \(f^{5/6}\, Q^{5/3 - 2\alpha/3} \, \Psi^{5/3}\) & \(f^{-2/9}\, Q^{13\alpha/9 - 19/18} \, \Psi^{31/18}\)\\[0pt]
+R-ch. & \(f^{1/2}\, Q \, \Psi\) & \(f^{7/10}\, Q^{7/5}\, \Psi^{9/5}\) & \(f^{1/15}\, Q^{49/30}\, \Psi^{43/30}\)\\[0pt]
+Pipe & \(f^{3/2}\, Q^3 \, S^{-5/2}\) & \(f^{5/2}\, Q^5\, S^{-9/2}\) & \(f^{3/2} \, Q^{9/2} \, S^{-43/12}\)\\[0pt]
+\end{tabular}\\
+\mauro{That negative exponent of $f$ for Bagnold-River is pretty crazy! Not sure what that is about.}
+
+\end{document}

@@ -617,23 +617,22 @@ for conditions well above transport onset threshold.
 Kind & Fixed & Determined via D-W & Additional relations & Shear stress & Stream p.\\[0pt]
  &  &  &  & \(\tau \propto\) & \(\Omega \propto\)\\[0pt]
 \hline
-River & \(\Psi\) & \(H \propto (f \Psi^{-1} Q^{2-2\alpha})^{1/3}\) & \(w\propto Q^\alpha\), \(S=WH\), \(D_h=H\) & \(f^{1/3} Q^{2/3-2\alpha/3}  \Psi^{2/3}\) & \(Q \Psi\)\\[0pt]
-R-ch. & \(\Psi\) & \(S \propto (f \Psi^{-1} Q^2)^{2/5}\) & \(D_h\propto S^{1/2}\) & \(f^{1/5} Q^{2/5} \, \Psi^{4/5}\) & \(Q \Psi\)\\[0pt]
-Pipe & \(S\) & \(\Psi \propto f Q^2 S^{-5/2}\) & \(D_h\propto S^{1/2}\) & \(f Q^2 S^{-2}\) & \(f Q^3 S^{-5/2}\)\\[0pt]
+River & \(\Psi\) & \(H \propto f^{1/3}\, Q^{2/3-2\alpha/3} \, \Psi^{-1/3}\) & \(W\,\propto Q^\alpha\), \(S=WH\), \(D_h=H\) & \(f^{1/3} Q^{2/3-2\alpha/3}  \Psi^{2/3}\) & \(Q \Psi\)\\[0pt]
+R-ch. & \(\Psi\) & \(S\, \propto f^{2/5}\, Q^{4/5} \, \Psi^{-2/5}\) & \(D_h\propto S^{1/2}\) & \(f^{1/5} Q^{2/5} \, \Psi^{4/5}\) & \(Q \Psi\)\\[0pt]
+Pipe & \(S\) & \(\Psi \propto f \, Q^2\, S^{-5/2}\) & \(D_h\propto S^{1/2}\) & \(f Q^2 S^{-2}\) & \(f Q^3 S^{-5/2}\)\\[0pt]
 \end{tabular}
 
 \vspace{10mm}
 
-
 \noindent
-\begin{tabular}{llll}
- & MPM & EH & Bagnold\\[0pt]
-\(Q_s \propto\) & \$W$\backslash$, \(\tau\)\textsuperscript{3/2} & \(W\, \tau^{5/2}\) & \(W\, \Omega^{3/2} H^{-2/3}\)\\[0pt]
+\begin{tabular}{lllll}
+ & Width*\(\tau\) & MPM & EH & Bagnold\\[0pt]
+ & \(W\, \tau\) & \(Q_s \propto W\, \tau^{3/2}\) & \(Q_s \propto W\, \tau^{5/2}\) & \(Q_s \propto W\, \Omega^{3/2} H^{-2/3}\)\\[0pt]
 \hline
-River & \(f^{1/2}\, Q \, \Psi\) & \(f^{5/6}\, Q^{5/3 - 2\alpha/3} \, \Psi^{5/3}\) & \(f^{-2/9}\, Q^{13\alpha/9 - 19/18} \, \Psi^{31/18}\)\\[0pt]
-R-ch. & \(f^{1/2}\, Q \, \Psi\) & \(f^{7/10}\, Q^{7/5}\, \Psi^{9/5}\) & \(f^{1/15}\, Q^{49/30}\, \Psi^{43/30}\)\\[0pt]
-Pipe & \(f^{3/2}\, Q^3 \, S^{-5/2}\) & \(f^{5/2}\, Q^5\, S^{-9/2}\) & \(f^{3/2} \, Q^{9/2} \, S^{-43/12}\)\\[0pt]
-\end{tabular}\\
+River & \(f^{1/3}\, Q^{2/3+\alpha/3}\,  \Psi^{2/3}\) & \(f^{1/2}\, Q \, \Psi\) & \(f^{5/6}\, Q^{5/3 - 2\alpha/3} \, \Psi^{5/3}\) & \(f^{-2/9}\, Q^{13\alpha/9 - 19/18} \, \Psi^{31/18}\)\\[0pt]
+R-ch. & \(f^{2/5}\, Q^{4/5} \, \Psi^{3/5}\) & \(f^{1/2}\, Q \, \Psi\) & \(f^{7/10}\, Q^{7/5}\, \Psi^{9/5}\) & \(f^{1/15}\, Q^{49/30}\, \Psi^{43/30}\)\\[0pt]
+Pipe & \(f \, Q^2 \, S^{-1}\) & \(f^{3/2}\, Q^3 \, S^{-5/2}\) & \(f^{5/2}\, Q^5\, S^{-9/2}\) & \(f^{3/2} \, Q^{9/2} \, S^{-43/12}\)\\[0pt]
+\end{tabular}
 \mauro{That negative exponent of $f$ for Bagnold-River is pretty crazy! Not sure what that is about.}
 
 \end{document}

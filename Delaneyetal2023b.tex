@@ -560,14 +560,14 @@ G. King provided useful comments on a previous version of this manuscript.
 
 
 \newpage
-\section{Scalings for sediment transport in different drainage regimes}
+\section{Formulas for sediment transport in different drainage regimes}
 \label{sect:scaling}
 
 \mauro{Notation: either use $H$ and $W$ for the river, or otherwise, somehow free $h$. Below I use $H$ and $W$ for now.}
 
-Here we look at three kind of drainage regimes, namely, rivers, steady-state R-channels, and pipe-flow (i.e. R-channels which do not have time to adjust their size to discharge conditions).  We calculate how in these regimes shear stress and sediment flux scale with respect to a given discharge for three different transport formulas: MPM \cite{meyer1948}, EH \cite{engelund1967}, and Bagnold \cite{Bagnold1980}.
+Here we look at three kind of drainage regimes, namely, rivers, steady-state R-channels, and pipe-flow (i.e. R-channels which do not have time to adjust their size to discharge conditions).  We calculate how in these regimes sediment flux scales with respect to a given discharge for three different transport formulas: MPM \cite{meyer1948}, EH \cite{engelund1967}, and Bagnold \cite{Bagnold1980}; additionally we state the width integrated shear stress used as proxy for sediment transport throughout the manuscript.
 
-A few basic hydraulic relations are used in the following.  The Darcy-Weisbach equation can be stated
+A few basic hydraulic relations are used in the following.  The Darcy-Weisbach equation can be stated as
 \begin{equation}
   \label{eq:DW}
   \Psi \propto f\frac{Q^2}{D_h S^2},
@@ -582,47 +582,68 @@ Sediment discharge is given by the MPM, EH and Bagnold formulations as, respecti
 \begin{equation}
   Q_s \propto w\, \tau^{3/2}, \quad Q_s \propto w\, \tau^{5/2}, \quad Q_s \propto w\, \Omega^{3/2}
 \end{equation}
-for conditions well above transport onset threshold.
+for conditions well above the transport onset threshold.
 
-We assume a wide river with depth $H$, such that $W \gg H$ and $D_h\approx 4H$, that has a constant head gradient ($\Psi$) given by the topography and we assume that its width can be approximated by a relation $w \propto Q^\alpha$ with $\alpha\in [0,1]$; typically $\alpha \approx 1/2$, $\alpha=0$ or $\alpha=1$ correspond a river of constant width or depth, respectively.
+The river is assumed to have a width $W$ much greater than its depth $H$, such that $D_h\approx 4H$, and to have a constant head gradient ($\Psi$) given by the topography.  Further, we assume that its width can be approximated by a relation $w \propto Q^\alpha$ with $\alpha\in [0,1]$; typically $\alpha \approx 1/2$, $\alpha=0$ or $\alpha=1$ correspond a river of constant width or depth, respectively.
+%
+For a steady state R-channel, we assume that it has a constant $\Psi$ (approximated by the gradient of the Shreve \citeyear{shreve1972} potential) and that $S$ adjusts such that it is in steady state corresponding to $\Psi$ and $Q$.  %Conversely, pipe flow has $S$ fixed and $\Psi$ adjusts to satisfy the given $Q$.
+%
+For pipe flow, which occurs when a R-channel is subjected to rapid discharge variations such that it cannot adjust its size significantly,  we assume that the cross-sectional area $S$ is fixed and that $\Psi$ adjusts to meet the specified $Q$.  For both R-channel and pipe flow, we assume that $D_h \propto S^{1/2}$.
 
-We assume that a steady state R-channel has a constant $\Psi$ (approximated by the gradient of the Shreve \citeyear{shreve1972} potential) and that $S$ adjusts such that it is in steady state.  Conversely, pipe flow has $S$ fixed and $\Psi$ adjusts.
-We assume that for pipe flow, which occurs when a R-channel is subjected to rapid discharge variations such that it cannot adjust its size significantly, the cross-sectional area $S$ is fixed and that $\Psi$ adjusts.  For both R-channel and pipe flow, we assume that $D_h \propto S^{1/2}$.
+With these assumptions the Darcy-Weisbach equation~\eqref{eq:DW} can be solved for the not-fixed quantity: $H$ for a river, $S$ for a R-channel, and $\Psi$ for pipe-flow.  Then, using equations~\eqref{eq:tau-omega}, the shear stress and stream power can be calculated.  These results are summarised in Table~\ref{tab:eqs1}.
+Now width integrated shear stress and sediment transport can be calculated for all regimes and for all transport formulas.  The results of the 12 combinations are presented in Table~\ref{tab:Qs} and also in Table~\ref{tab:Qs2} where the fractions in the exponents are approximately given by decimal numbers for ease of comparison.
 
-With these assumptions the Darcy-Weisbach equation~\eqref{eq:DW} can be solved for the not-fixed quantity: $H$ for river, $S$ for R-channel, and $\Psi$ for pipe-flow.  Then, using equations~\eqref{eq:tau-omega}, the shear stress and stream power can be calculated.  These resulted are summarised in Table~\ref{tab:eqs1}.
-Now sediment transport can be calculated for all regimes and all transport formulas.  The results of the nine combinations are presented in Table~\ref{tab:Qs} and also in Table~\ref{tab:Qs2} where the fractions in the exponents are approximately given by decimal numbers for ease of comparison.
+\mauro{Bagnold gives pretty crazy results. Check again!}
+
+Table~\ref{tab:Qs2} shows that the proxy $W\tau$ as well as the MPM and EH sediment transport formulas give roughly a similar scaling of $Q_s$ on $\Psi$ or $S$ and on $Q$.  The total transport formula EH giving a stronger dependence on all variables as should be expected duto to the larger exponent on $\tau$ of 2.5 versus 1.5 for the others.  The exponent for the width scaling $\alpha$ only impacts the EH relation, with its value almost certainly around or bigger than 0.5 for a braided proglacial stream.
+%
+The sediment discharge in the steady state R-channel scales very similarly to the river case, and almost identically for the $\alpha=0.5$ case.  However, note that the head gradients $\Psi$ are likely much higher for comparable $Q$ in a glacial setting than a river setting, as is well described in \citeA{alley1997}, and thus transport rates may still be much higher in a steady state R-channel.
+%
+Furthermore, R-channels will rarely operate in steady state as variations in discharge, in particular on the diurnal timescale or the timescale of severe rain or melting events, are too fast for such a channel to reach a steady state.  In such cases they operate more like a pipe of fixed cross-section.  Table~\ref{tab:Qs2} shows that then the sediment transport scales much more severely with discharge, with the exponent of $Q$ being between 2 and 5, than in the other two regimes when that exponent is at most 1.3.  Thus fluctuations of discharge on short timescales (on the order of a day) have the potential to cause very high sediment transport conditions.
 
 \begin{table}
-  \caption{}
+  \caption{Relations for hydraulic variables for the three drainage regimes: river, R-channel and pipe-flow.  Darcy-Weisbach equation is abbreviated with ``D-W'', and stream power with ``Stream p.''. }
   \label{tab:eqs1}
   \small
 \begin{tabular}{llllll}
-Regime & Fixed & Determined via D-W & Additional relations & Shear stress & Stream p.\\[0pt]
- &  &  &  & \(\tau \propto\) & \(\Omega \propto\)\\[0pt]
+Regime & Fixed & Determined via D-W & Additional relations & Shear stress & Stream p.\\
+ &  &  &  & \(\tau \propto\) & \(\Omega \propto\)\\
 \hline
-River & \(\Psi\) & \(H \propto f^{1/3}\, Q^{2/3-2\alpha/3} \, \Psi^{-1/3}\) & \(W\,\propto Q^\alpha\), \(S=WH\), \(D_h=H\) & \(f^{1/3} Q^{2/3-2\alpha/3}  \Psi^{2/3}\) & \(Q \Psi\)\\[0pt]
-R-ch. & \(\Psi\) & \(S\, \propto f^{2/5}\, Q^{4/5} \, \Psi^{-2/5}\) & \(D_h\propto S^{1/2}\) & \(f^{1/5} Q^{2/5} \, \Psi^{4/5}\) & \(Q \Psi\)\\[0pt]
-Pipe & \(S\) & \(\Psi \propto f \, Q^2\, S^{-5/2}\) & \(D_h\propto S^{1/2}\) & \(f Q^2 S^{-2}\) & \(f Q^3 S^{-5/2}\)\\[0pt]
+River & \(\Psi\) & \(H \propto f^{1/3}\, Q^{2/3-2\alpha/3} \, \Psi^{-1/3}\) & \(W\,\propto Q^\alpha\), \(S=WH\), \(D_h=H\) & \(f^{1/3} Q^{2/3-2\alpha/3}  \Psi^{2/3}\) & \(Q \Psi\)\\
+R-ch. & \(\Psi\) & \(S\, \propto f^{2/5}\, Q^{4/5} \, \Psi^{-2/5}\) & \(D_h\propto S^{1/2}\) & \(f^{1/5} Q^{2/5} \, \Psi^{4/5}\) & \(Q \Psi\)\\
+Pipe & \(S\) & \(\Psi \propto f \, Q^2\, S^{-5/2}\) & \(D_h\propto S^{1/2}\) & \(f Q^2 S^{-2}\) & \(f Q^3 S^{-5/2}\)\\
 \end{tabular}
 \end{table}
 
 
 \begin{table}
-  \caption{
-    \mauro{That negative exponent of $f$ for Bagnold-River is pretty crazy! Not sure what that is about.}
+  \caption{Sediment transport proxy ($W\tau$) and rates for the three considered different transport formulas: MPM \cite{meyer1948}, EH \cite{engelund1967}, and Bagnold \cite{Bagnold1980}.
     }
   \label{tab:Qs}
 \begin{tabular}{lllll}
- & Width*\(\tau\) & MPM & EH & Bagnold\\[0pt]
- & \(W\, \tau\) & \(Q_s \propto W\, \tau^{3/2}\) & \(Q_s \propto W\, \tau^{5/2}\) & \(Q_s \propto W\, \Omega^{3/2} H^{-2/3}\)\\[0pt]
+ & Width*\(\tau\) & MPM & EH & Bagnold\\
+ & \(W\, \tau\) & \(Q_s \propto W\, \tau^{3/2}\) & \(Q_s \propto W\, \tau^{5/2}\) & \(Q_s \propto W\, \Omega^{3/2} H^{-2/3}\)\\
 \hline
-River & \(f^{1/3}\, Q^{2/3+\alpha/3}\,  \Psi^{2/3}\) & \(f^{1/2}\, Q \, \Psi\) & \(f^{5/6}\, Q^{5/3 - 2\alpha/3} \, \Psi^{5/3}\) & \(f^{-2/9}\, Q^{13\alpha/9 - 19/18} \, \Psi^{31/18}\)\\[0pt]
-R-ch. & \(f^{2/5}\, Q^{4/5} \, \Psi^{3/5}\) & \(f^{1/2}\, Q \, \Psi\) & \(f^{7/10}\, Q^{7/5}\, \Psi^{9/5}\) & \(f^{1/15}\, Q^{49/30}\, \Psi^{43/30}\)\\[0pt]
-Pipe & \(f \, Q^2 \, S^{-1}\) & \(f^{3/2}\, Q^3 \, S^{-5/2}\) & \(f^{5/2}\, Q^5\, S^{-9/2}\) & \(f^{3/2} \, Q^{9/2} \, S^{-43/12}\)\\[0pt]
+River & \(f^{1/3}\, Q^{2/3+\alpha/3}\,  \Psi^{2/3}\) & \(f^{1/2}\, Q \, \Psi\) & \(f^{5/6}\, Q^{5/3 - 2\alpha/3} \, \Psi^{5/3}\) & \(f^{-2/9}\, Q^{13\alpha/9 - 19/18} \, \Psi^{31/18}\)\\
+R-ch. & \(f^{2/5}\, Q^{4/5} \, \Psi^{3/5}\) & \(f^{1/2}\, Q \, \Psi\) & \(f^{7/10}\, Q^{7/5}\, \Psi^{9/5}\) & \(f^{1/15}\, Q^{49/30}\, \Psi^{43/30}\)\\
+Pipe & \(f \, Q^2 \, S^{-1}\) & \(f^{3/2}\, Q^3 \, S^{-5/2}\) & \(f^{5/2}\, Q^5\, S^{-9/2}\) & \(f^{3/2} \, Q^{9/2} \, S^{-43/12}\)\\
 \end{tabular}
 \end{table}
 
-
-\mauro{TODO: make third table C3.  Discuss results briefly.}
+\begin{table}
+  \caption{Sediment transport proxy ($W\tau$) and rates for the three considered different transport formulas: MPM \cite{meyer1948}, EH \cite{engelund1967}, and Bagnold \cite{Bagnold1980}.
+    }
+  \label{tab:Qs2}
+\begin{tabular}{lllll}
+ & Width*\(\tau\) & MPM & EH & Bagnold\\
+ & \(W\, \tau\) & \(Q_s \propto W\, \tau^{3/2}\) & \(Q_s \propto W\, \tau^{5/2}\) & \(Q_s \propto W\, \Omega^{3/2} H^{-2/3}\)\\
+\hline
+River (\(\alpha=0\)) & \(f^{0.7}\, Q^{0.7}\,  \Psi^{0.7}\) & \(f^{0.5}\, Q \,\,\,\, \Psi\) & \(f^{0.8}\, Q^{1.7} \, \Psi^{1.7}\) & \(f^{-0.2}\, Q^{-1.1} \, \Psi^{1.7}\)\\
+River (\(\alpha=0.5\)) & \(f^{0.7}\, Q^{0.8}\,  \Psi^{0.7}\) & \(f^{0.5}\, Q \,\,\,\,\Psi\) & \(f^{0.8}\, Q^{1.3} \, \Psi^{1.7}\) & \(f^{-0.2}\, Q^{-0.3} \, \Psi^{1.7}\)\\
+River (\(\alpha=1\)) & \(f^{0.7}\, Q^{1.0}\,  \Psi^{0.7}\) & \(f^{0.5}\, Q \,\,\,\, \Psi\) & \(f^{0.8}\, Q^{0.7} \, \Psi^{1.7}\) & \(f^{-0.2}\, Q^{0.4} \, \Psi^{1.7}\)\\[3pt]
+R-ch. & \(f^{0.4}\, Q^{0.8} \, \Psi^{0.6}\) & \(f^{0.5}\, Q \,\,\,\, \Psi\) & \(f^{0.7}\, Q^{1.4}\, \Psi^{1.8}\) & \(f^{0.07}\, Q^{1.6}\, \Psi^{1.4}\)\\
+Pipe & \(f \quad\, Q^{2\phantom{.0}} \, S^{-1}\) & \(f^{1.5}\, Q^3 \, S^{-2.5}\) & \(f^{2.5}\, Q^{5\phantom{.0}}\, S^{-4.5}\) & \(f^{1.5} \, Q^{4.5} \, S^{-3.6}\)\\
+\end{tabular}
+\end{table}
 
 \end{document}

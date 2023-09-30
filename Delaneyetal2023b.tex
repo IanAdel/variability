@@ -560,71 +560,58 @@ G. King provided useful comments on a previous version of this manuscript.
 
 
 \newpage
-\section{Mauro's bit about shear stress}
+\section{Scalings for sediment transport in different drainage regimes}
 \label{sect:scaling}
 
+\mauro{Notation: either use $H$ and $W$ for the river, or otherwise, somehow free $h$. Below I use $H$ and $W$ for now.}
 
-Here we look at three possibilities, namely, rivers, steady-state
-R-channels, and pipe-flow (i.e. R-channels which do not have time to
-adjust their size to discharge conditions).
+Here we look at three kind of drainage regimes, namely, rivers, steady-state R-channels, and pipe-flow (i.e. R-channels which do not have time to adjust their size to discharge conditions).  We calculate how in these regimes shear stress and sediment flux scale with respect to a given discharge for three different transport formulas: MPM \cite{meyer1948}, EH \cite{engelund1967}, and Bagnold \cite{Bagnold1980}.
 
-Basics of hydraulics
+A few basic hydraulic relations are used in the following.  The Darcy-Weisbach equation can be stated
 \begin{equation}
-  \Psi \propto f\frac{v^2}{D}
+  \label{eq:DW}
+  \Psi \propto f\frac{Q^2}{D_h S^2},
 \end{equation}
-or
+with $\Psi$ the head gradient and friction factor $f$.  The shear stress and stream power are, respectively,
 \begin{equation}
-  \Psi \propto f\frac{Q^2}{D^5}.
+    \label{eq:tau-omega}
+  \tau \propto f v^2 = f \left(\frac{Q}{S}\right)^2, \quad  \Omega \propto \Psi Q.
 \end{equation}
-Then
+%
+Sediment discharge is given by the MPM, EH and Bagnold formulations as, respectively,
 \begin{equation}
-  \tau \propto v^2 = (Q/S)^2.
+  Q_s \propto w\, \tau^{3/2}, \quad Q_s \propto w\, \tau^{5/2}, \quad Q_s \propto w\, \Omega^{3/2}
 \end{equation}
-
-For all flow types we assume that the discharge $Q$ is given.
-A flow in a wide river has $\Psi$ constant (given by topography), $w \gg h$, and we assume the width can be approximated by a relation $w \propto Q^\alpha$ with $\alpha\in [0,1]$ and typically $\alpha \approx 1/2$.  A R-channel flow has $\Psi$ constant (approximated by the Shreve potential) and $S$ adjusts such that it is in steady state.  Pipe flow has $S$ fixed and $\Psi$ adjusts.
-
-Shear stresses are given by
-\begin{align}
-  \text{wide river} \quad\quad &  \tau \propto \left(\frac{Q}{w}\right)^{2/3} \Psi^{2/3}\\
-  \text{R-channel} \quad\quad & \tau =  \\
-  \text{pipe} \quad\quad &  \tau \propto v^2 \propto\\
-\end{align}
-
-Stream power are
-
-
-
-Basics on sediment transport
-\begin{align}
-  \text{MPM} \quad\quad & Q_s \propto w \tau^{3/2}\\
-  \text{EH}  \quad\quad& Q_s \propto w \tau^{5/2}\\
-  \text{Bagnold}  \quad\quad & Q_s \propto w (\Psi Q)^{3/2}
-\end{align}
 for conditions well above transport onset threshold.
 
-% \begin{tabular}{lll}
-%  & Shear stress & Stream power\\[0pt]
-%  & \(\tau \propto\) & \(\Omega \propto\)\\[0pt]
-% \hline
-% River & \(\big(\tfrac{Q}{w}\big)^{2/3} \Psi^{2/3}\) & \(Q \Psi\)\\[3pt]
-% R-channel & \(Q^{2/5} \, \Psi^{4/5}\) & \(Q \Psi\)\\
-% Pipe & \(Q^2\) & \(Q^3\)\\
-% \end{tabular}
+We assume a wide river with depth $H$, such that $W \gg H$ and $D_h\approx 4H$, that has a constant head gradient ($\Psi$) given by the topography and we assume that its width can be approximated by a relation $w \propto Q^\alpha$ with $\alpha\in [0,1]$; typically $\alpha \approx 1/2$, $\alpha=0$ or $\alpha=1$ correspond a river of constant width or depth, respectively.
 
-\noindent
+We assume that a steady state R-channel has a constant $\Psi$ (approximated by the gradient of the Shreve \citeyear{shreve1972} potential) and that $S$ adjusts such that it is in steady state.  Conversely, pipe flow has $S$ fixed and $\Psi$ adjusts.
+We assume that for pipe flow, which occurs when a R-channel is subjected to rapid discharge variations such that it cannot adjust its size significantly, the cross-sectional area $S$ is fixed and that $\Psi$ adjusts.  For both R-channel and pipe flow, we assume that $D_h \propto S^{1/2}$.
+
+With these assumptions the Darcy-Weisbach equation~\eqref{eq:DW} can be solved for the not-fixed quantity: $H$ for river, $S$ for R-channel, and $\Psi$ for pipe-flow.  Then, using equations~\eqref{eq:tau-omega}, the shear stress and stream power can be calculated.  These resulted are summarised in Table~\ref{tab:eqs1}.
+Now sediment transport can be calculated for all regimes and all transport formulas.  The results of the nine combinations are presented in Table~\ref{tab:Qs} and also in Table~\ref{tab:Qs2} where the fractions in the exponents are approximately given by decimal numbers for ease of comparison.
+
+\begin{table}
+  \caption{}
+  \label{tab:eqs1}
+  \small
 \begin{tabular}{llllll}
-Kind & Fixed & Determined via D-W & Additional relations & Shear stress & Stream p.\\[0pt]
+Regime & Fixed & Determined via D-W & Additional relations & Shear stress & Stream p.\\[0pt]
  &  &  &  & \(\tau \propto\) & \(\Omega \propto\)\\[0pt]
 \hline
 River & \(\Psi\) & \(H \propto f^{1/3}\, Q^{2/3-2\alpha/3} \, \Psi^{-1/3}\) & \(W\,\propto Q^\alpha\), \(S=WH\), \(D_h=H\) & \(f^{1/3} Q^{2/3-2\alpha/3}  \Psi^{2/3}\) & \(Q \Psi\)\\[0pt]
 R-ch. & \(\Psi\) & \(S\, \propto f^{2/5}\, Q^{4/5} \, \Psi^{-2/5}\) & \(D_h\propto S^{1/2}\) & \(f^{1/5} Q^{2/5} \, \Psi^{4/5}\) & \(Q \Psi\)\\[0pt]
 Pipe & \(S\) & \(\Psi \propto f \, Q^2\, S^{-5/2}\) & \(D_h\propto S^{1/2}\) & \(f Q^2 S^{-2}\) & \(f Q^3 S^{-5/2}\)\\[0pt]
 \end{tabular}
+\end{table}
 
-\vspace{10mm}
 
-\noindent
+\begin{table}
+  \caption{
+    \mauro{That negative exponent of $f$ for Bagnold-River is pretty crazy! Not sure what that is about.}
+    }
+  \label{tab:Qs}
 \begin{tabular}{lllll}
  & Width*\(\tau\) & MPM & EH & Bagnold\\[0pt]
  & \(W\, \tau\) & \(Q_s \propto W\, \tau^{3/2}\) & \(Q_s \propto W\, \tau^{5/2}\) & \(Q_s \propto W\, \Omega^{3/2} H^{-2/3}\)\\[0pt]
@@ -633,6 +620,9 @@ River & \(f^{1/3}\, Q^{2/3+\alpha/3}\,  \Psi^{2/3}\) & \(f^{1/2}\, Q \, \Psi\) &
 R-ch. & \(f^{2/5}\, Q^{4/5} \, \Psi^{3/5}\) & \(f^{1/2}\, Q \, \Psi\) & \(f^{7/10}\, Q^{7/5}\, \Psi^{9/5}\) & \(f^{1/15}\, Q^{49/30}\, \Psi^{43/30}\)\\[0pt]
 Pipe & \(f \, Q^2 \, S^{-1}\) & \(f^{3/2}\, Q^3 \, S^{-5/2}\) & \(f^{5/2}\, Q^5\, S^{-9/2}\) & \(f^{3/2} \, Q^{9/2} \, S^{-43/12}\)\\[0pt]
 \end{tabular}
-\mauro{That negative exponent of $f$ for Bagnold-River is pretty crazy! Not sure what that is about.}
+\end{table}
+
+
+\mauro{TODO: make third table C3.  Discuss results briefly.}
 
 \end{document}

@@ -281,7 +281,7 @@ In both subaerial channels, the bed slope is $\nabla z_c = 0.05$.
 
 Second, to further characterize the variability in sediment discharge capacity in subglacial compared to subaerial channels, $100$  parameterizations are applied to a range of different channel geometry factors ($\beta$ and $k$) and friction factors ($f_r$ and $f_p$).
 Runs with parameter combinations are culled if their mean subglacial water velocity over the season lies between $0.75$\,\unit{m}$^3$\,\unit{s}$^{-1}$ and $2$\,\unit{m}$^3$\,\unit{s}$^{-1}$ or if subaerial water velocity lies between $0.3$\,\unit{m}$^3$\,\unit{s}$^{-1}$ and $1.2$\,\unit{m}$^3$\,\unit{s}$^{-1}$, in accordance with measurements \cite<e.g.>{werder2010b,magnusson2012,chandler2013}.
-The variability of output is represented by the  standard deviation of that output over the course of the season. 
+The variability of output is represented by the  standard deviation of that output over the course of the season.
 
 Lastly, outputs are compared with the sediment discharge records of the glaciers using Spearman rank correlation, dependent on the ordering of values.
 Rank correlation reduces the impact of the non-linear response of sediment transport capacity to the hydrological forcing.
@@ -388,7 +388,7 @@ For sufficiently short time periods, channel width and wetted area are fixed in 
 \ref{sect:scaling} provides a complete description of sediment transport capacity in different drainage conditions.
 
 The stronger correlation between subglacial hydraulics and water discharge in \icesheet{} could result from the channel being closer to equilibrium between variations in the channels' wetter area and water discharge with smaller diurnal variations in amplitude (Figures~\ref{fig:model_outs} and ~\ref{fig:Qw_vari}).
-Conversely, the correlation between hydraulics and water discharge in \alpine is smaller due to the larger discharge variations. 
+Conversely, the correlation between hydraulics and water discharge in \alpine is smaller due to the larger discharge variations.
 In both cases, hydraulics could trend toward equilibrium by averaging the discharge over $1-5$ days, when the variability in subglacial channels approaches that of subaerial one (Figure~\ref{fig:multi_run}).
 
 In subglacial channels, peaks in water velocity, shear stress and width-integrated shear stress occur with  fast rates of water discharge increase relative to the channel's growth (Figure~\ref{fig:model_outs}).
@@ -481,11 +481,11 @@ G. King provided useful comments on a previous version of this manuscript.
     Width of channel floor (glacial, subaerial) & $w_{cg},w_{cf}$&  & $\mathrm{m}$     \\
     Hydraulic head &$\Delta h$&& $\mathrm{m}$\\
     Hydraulic gradient &$\Psi=\frac{\Delta h}{l}$&& $\mathrm{m\, m^{-1}}$\\
-    
+
     Shear stress (glacier, subaerial) & $\tau_g,\,\tau_f$&& $\mathrm{Pa \, m^{-2}}$ \\
     Width-integrated shear stress (glacier, subaerial) & $\tau_{tg},\, \tau_{tf}$&& $\mathrm{Pa \, m^{-1}}$ \\
     Stream power & $\Omega$ && $\mathrm{ kg \, m\, s^{-3}}$ \\
- 
+
          &&&\\
 
     \textbf{Parameters and Constants}  & & &\\
@@ -506,7 +506,7 @@ G. King provided useful comments on a previous version of this manuscript.
     Friction factor (subglacial) & $f_r$ &$10$ or $20$ & $\mathrm{(-)}$ \\
     Friction factor (subaerial) & $f_p$ & $3$ & $\mathrm{(-)}$\\
     Gradient of channel bed (subaerial) &$\nabla z_c$ &$0.05$& $\mathrm{(-)}$\\
-    Subaerial channel factor & $k$ &$3$ or $6.5$ & $\mathrm{s\,m^{-2}}$\\ 
+    Subaerial channel factor & $k$ &$3$ or $6.5$ & $\mathrm{s\,m^{-2}}$\\
     Channel geometry exponent &$\alpha$& $\frac{1}{2}$&$\mathrm{(-)}$ \\
     \hline
   \end{tabular}
@@ -576,7 +576,7 @@ G. King provided useful comments on a previous version of this manuscript.
 \mauro{Notation: either use $h$ and $w_c$ for the river, or otherwise, somehow free $h$. Below I use $H$ and $W$ for now.}
 
 Here three kinds of drainage regimes are examined, namely, subaerial channels, steady-state R-channels \cite{rothlisberger1972}, and pipe-flow (i.e. R-channels which do not have time to adjust their size to discharge conditions).
-Sediment transport capacity is scaled with respect to a given water discharge for three different transport formulas: MPM \cite{meyer1948}, EH \cite{engelund1967}, and Bagnold \cite{bagnold1980}; additionally width-integrated shear stress is assessed, as it is  used as proxy for sediment transport throughout the manuscript.
+Here we show how sediment transport capacity scales with respect to a given water discharge and hydraulic gradient for three different transport formulas: MPM \cite{meyer1948}, EH \cite{engelund1967}, and Bagnold \cite{bagnold1980}; additionally width-integrated shear stress is assessed, as used as proxy for sediment transport throughout the manuscript.
 
 A few basic hydraulic relations are used in the following.
 The Darcy-Weisbach equation can be stated as
@@ -584,7 +584,7 @@ The Darcy-Weisbach equation can be stated as
   \label{eq:DW}
   \Psi \propto f\frac{Q^2}{D_h S^2},
 \end{equation}
-with $\Psi$ the head gradient and friction factor $f$.
+with $\Psi = \Delta h / l$ the head gradient and friction factor $f$.
 The shear stress and stream power are, respectively,
 \begin{equation}
     \label{eq:tau-omega}
@@ -592,19 +592,20 @@ The shear stress and stream power are, respectively,
 \end{equation}
 %
 
-Sediment discharge is given by the MPM, EH and Bagnold formulations as, respectively,
+Sediment discharge is given by the MPM, EH and Bagnold formulations as
 \begin{equation}
-  Q_s \propto w_c\, \tau^{3/2}, \quad Q_s \propto w_c\, \tau^{5/2}, \quad Q_s \propto w_c \left(\frac{\Omega}{w_c}\right)^{3/2} H^{-2/3}
+  Q_s \propto w_c\, \tau^{3/2}, \quad Q_s \propto w_c\, \tau^{5/2}, \quad Q_s \propto w_c \left(\frac{\Omega}{w_c}\right)^{3/2} H^{-2/3},
 \end{equation}
-for conditions well above the transport onset threshold.
+respectively, for conditions well above the transport onset threshold.
 
-The  subaerial channels is assumed to have a width $w_c$ much greater than its depth $H$, such that $D_h\approx 4h$, and to have a constant head gradient ($\Psi$) given by the topography.
+The  subaerial channel is assumed to have a width $w_c$ much greater than its depth $H$, such that $D_h\approx 4h$, and to have a constant head gradient ($\Psi$) given by the topography.
 Further, it is  assumed that its width can be approximated by a relation $w_c \propto Q^\alpha$ (Equation~\ref{eq:wcf})with $\alpha\in [0,1]$; typically $\alpha \approx 1/2$ (a so-called regime channel).
 End members $\alpha=0$ or $\alpha=1$ correspond a  subaerial channels of constant width (a slot canyon) or depth (no natural equivalent), respectively.
 %
-For a steady state R-channel, it is assumed that  $\Psi$ is constant (approximated by the gradient of the Shreve \citeyear{shreve1972} potential) and that $S$ adjusts such that it is in steady state with $\Psi$ and $Q$.  %Conversely, pipe flow has $S$ fixed and $\Psi$ adjusts to satisfy the given $Q$.
+For a steady state R-channel, it is assumed that  $\Psi$ is constant (approximated by the gradient of the Shreve \citeyear{shreve1972} potential \footnote{Note that the R-channel model presented above (Eq.~\eqref{eq:dS_dt}--\eqref{eq:dh2wc}), calculates $\Psi$ from the time evolving $S_g$ (Eq.~\eqref{eq:dS_dt}) via the Darcy-Weisbach equation~\eqref{eq:dh} and thus no Shreve approximation is then needed.}) and that $S$ adjusts such that it is in steady state with $\Psi$ and $Q$.
+% Conversely, pipe flow has $S$ fixed and $\Psi$ adjusts to satisfy the given $Q$.
 %
-Pipe flow is approximated when a R-channel is subjected to rapid discharge variations such that the channel does not adjust its size significantly on the time scale of the discharge variations.
+Pipe flow like conditions occur when a R-channel is subjected to rapid discharge variations such that the channel cannot adjust its size significantly on the time scale of the discharge variations.
 In this case, it is assumed that the cross-sectional area $S$ is fixed, and $\Psi$ adjusts to the specified $Q$.
 For both R-channel and pipe flow, it is assumed assume that $D_h \propto S^{1/2}$.
 
@@ -613,37 +614,33 @@ Then, using equations~\eqref{eq:tau-omega}, the shear stress and stream power ca
 These results are summarised in Table~\ref{tab:eqs1}.
 Now width integrated shear stress and sediment transport can be calculated for all regimes and for all transport formulas.  The results of the 12 combinations are presented in Table~\ref{tab:Qs} and also in Table~\ref{tab:Qs2} where the fractions in the exponents are approximately given by decimal numbers for ease of comparison.
 
-Table~\ref{tab:Qs2} shows that the proxy $w_c\tau$ as well as the MPM, EH and Bagnold sediment transport formulas give roughly a similar scaling of $Q_s$ on hydraulic gradient $\Psi$ or $S$ and on water discharge $Q$.
+Table~\ref{tab:Qs2} shows how the proxy $w_c\tau$ as well as $Q_s$ of the MPM, EH and Bagnold sediment transport formulas scale with respect to $Q$, $\Psi$ or $S$ for the three different regimes and for different $\alpha$.
 Remarkably, the Bagnold formula has a negative exponent for $f$ in all but the pipe-flow regime, which seems rather unexpected.
 The total transport formula EH gives a slightly stronger dependence on all variables as should be expected due to the larger exponent on $\tau$ of $\frac{5}{2}$ versus  $\frac{3}{2}$  for the others.
 Albeit, the sediment transport response in pipe-flow for the Bagnold case is close to EH.
-Conversely, the sediment transport proxy $t_{tg},t_{tf}$ used within this publication scales only as $Q^2$ for pipe-flow, whereas the others scale at least with $Q^3$.
+Conversely, the sediment transport proxy $w_g\,\tau_{g}, w_f\,\tau_{f}$ used within this publication scales only as $Q^2$ for pipe-flow, whereas the others scale at least with $Q^3$.
 The exponent for the width scaling $\alpha$ only impacts relationship between sediment transport and water discharge in the EH relation in any meaningful way.
-However, for the value of $\alpha$ around $\frac{1}{2}$,  suits braided proglacial stream and indeed most  subaerial channels.
-Furthermore, when $\alpha=1$, the exponent on $Q$ is only slightly above the other values of $\alpha$.
+However, for the value of $\alpha$ around $\frac{1}{2}$ (a value appropriate for most streams), the exponent on $Q$ for EH is only slightly above what the other transport relations give.
 
-The sediment discharge in the steady state R-channel scales very similarly to the  subaerial channel case for all relations and virtually identically for the $\alpha=0.5$ case.  However, note that the head gradients $\Psi$ are likely higher for comparable $Q$ in a ice-sheet marginal or alpine glacier setting than in a  subaerial channel, as is well described in \citeA{alley1997}, and thus transport rates may still be much higher in a steady state R-channel.
+The sediment discharge in the steady state R-channel scales very similarly to the  subaerial channel case for all relations and virtually identically for the $\alpha=0.5$ case.  However, note that the head gradients $\Psi$ are likely higher for comparable $Q$ in an ice-sheet marginal or alpine glacier setting than in a  subaerial channel, as is well described in \citeA{alley1997}, and thus transport rates may still be much higher in a steady state R-channel.
 
 Furthermore, R-channels will rarely operate in steady state as variations in discharge, in particular on the diurnal timescale or the timescale of severe rain or melting events, are too fast for such a channel to reach a steady state.
 In such cases they operate more like a pipe of fixed cross-section \cite<e.g.>{gimbert2016}.
 Table~\ref{tab:Qs2} shows that in such a situation, the sediment transport scales much more severely with discharge, with the exponent on $Q$ being likely between $3$ and $5$, compared to other two regimes when that exponent is at most $1.3$ (Table~\ref{tab:Qs2}).
-Thus fluctuations of discharge on short timescales (on the order of a day) have the potential to cause very high sediment transport conditions.
+Thus fluctuations of discharge on short timescales (on the order of a day) have the potential to cause conditions with very high sediment transport capacities.
 
 
 \begin{table}
   \caption{Relations for hydraulic variables for the three drainage regimes:  subaerial channels, R-channel and pipe-flow.  Darcy-Weisbach equation is abbreviated with ``D-W'', and stream power with ``Stream p.''. }
   \label{tab:eqs1}
-  \small
 \begin{tabular}{llllll}
-  Regime & Fixed & \makecell{Determined via D-W
-  \\Equation~\ref{eq:DW}} & Additional relations & Shear stress & Stream p.\\
- &  &  &  & \(\tau \propto\) & \(\Omega \propto\)\\
+  Regime & Fixed & Determined via D-W
+   & Additional relations & Shear stress & Stream p.\\
+& & (Equation~\ref{eq:DW})  &  &  \(\tau \propto\) & \(\Omega \propto\)\\
 \hline
-  Subaerial & \(\Psi\) & \(H \propto f^{1/3}\, Q^{2/3-2\alpha/3} \, \Psi^{-1/3}\) & 
-\makecell{\(w_c\,\propto Q^\alpha\) \\ \(S=w_cH\) \\ \(D_h=H\)} & 
-\(f^{1/3} Q^{2/3-2\alpha/3}  \Psi^{2/3}\) & \(Q \Psi\)\\
-R-ch. & \(\Psi\) & \(S\, \propto f^{2/5}\, Q^{4/5} \, \Psi^{-2/5}\) & \(D_h\propto w_c \propto H \propto S^{1/2}\) & \(f^{1/5} Q^{2/5} \, \Psi^{4/5}\) & \(Q \Psi\)\\
-Pipe & \(S\) & \(\Psi \propto f \, Q^2\, S^{-5/2}\) & \(D_h\propto w_c \propto H \propto S^{1/2}\) & \(f Q^2 S^{-2}\) & \(f Q^3 S^{-5/2}\)\\
+  Subaerial & \(\Psi\) & \(H \propto f^{1/3}\, Q^{2/3-2\alpha/3} \, \Psi^{-1/3}\) & \makecell{\(w_c\,\propto Q^\alpha\) \\ \(S=w_cH\) \\ \(D_h\propto H\)} & \(f^{1/3} Q^{2/3-2\alpha/3}  \Psi^{2/3}\) & \(Q\, \Psi\)\\
+  R-channel & \(\Psi\) & \(S\, \propto f^{2/5}\, Q^{4/5} \, \Psi^{-2/5}\) & \(D_h\propto w_c \propto H \propto S^{1/2}\) & \(f^{1/5} Q^{2/5} \, \Psi^{4/5}\) & \(Q\, \Psi\)\\
+Pipe & \(S\) & \(\Psi \propto f \, Q^2\, S^{-5/2}\) & \(D_h\propto w_c \propto H \propto S^{1/2}\) & \(f Q^2 S^{-2}\) & \(f\, Q^3 S^{-5/2}\)\\
 \end{tabular}
 \end{table}
 
@@ -652,11 +649,11 @@ Pipe & \(S\) & \(\Psi \propto f \, Q^2\, S^{-5/2}\) & \(D_h\propto w_c \propto H
     }
   \label{tab:Qs}
 \begin{tabular}{lllll}
- & Width*\(\tau\) & MPM & EH & Bagnold\\
+ & Width \(\times \,\, \tau\) & MPM & EH & Bagnold\\
  & \(w_c\, \tau\) & \(Q_s \propto w_c\, \tau^{3/2}\) & \(Q_s \propto w_c\, \tau^{5/2}\) & \(Q_s \propto w_c^{-1/2}\, \Omega^{3/2} H^{-2/3}\)\\
 \hline
 Subaerial  & \(f^{1/3}\, Q^{2/3+\alpha/3}\,  \Psi^{2/3}\) & \(f^{1/2}\, Q \, \Psi\) & \(f^{5/6}\, Q^{5/3 - 2\alpha/3} \, \Psi^{5/3}\) & \(f^{-2/9}\, Q^{19/18-\alpha/18} \, \Psi^{31/18}\)\\
-R-ch. & \(f^{2/5}\, Q^{4/5} \, \Psi^{3/5}\) & \(f^{1/2}\, Q \, \Psi\) & \(f^{7/10}\, Q^{7/5}\, \Psi^{9/5}\) & \(f^{-7/30}\, Q^{31/30}\, \Psi^{26/15}\)\\
+R-channel & \(f^{2/5}\, Q^{4/5} \, \Psi^{3/5}\) & \(f^{1/2}\, Q \, \Psi\) & \(f^{7/10}\, Q^{7/5}\, \Psi^{9/5}\) & \(f^{-7/30}\, Q^{31/30}\, \Psi^{26/15}\)\\
 Pipe & \(f \, Q^2 \, S^{-1}\) & \(f^{3/2}\, Q^3 \, S^{-5/2}\) & \(f^{5/2}\, Q^5\, S^{-9/2}\) & \(f^{3/2} \, Q^{9/2} \, S^{-14/3}\)\\
 \end{tabular}
 \end{table}
@@ -666,13 +663,13 @@ Pipe & \(f \, Q^2 \, S^{-1}\) & \(f^{3/2}\, Q^3 \, S^{-5/2}\) & \(f^{5/2}\, Q^5\
     }
   \label{tab:Qs2}
 \begin{tabular}{lllll}
- & Width*\(\tau\) & MPM & EH & Bagnold\\
+ & Width \(\times \,\, \tau\) & MPM & EH & Bagnold\\
  & \(w_c\, \tau\) & \(Q_s \propto w_c\, \tau^{3/2}\) & \(Q_s \propto w_c\, \tau^{5/2}\) & \(Q_s \propto w_c^{-1/2}\, \Omega^{3/2} H^{-2/3}\)\\
 \hline
 Subaerial (\(\alpha=0\)) & \(f^{0.7}\, Q^{0.7}\,  \Psi^{0.7}\) & \(f^{0.5}\, Q \,\,\,\, \Psi\) & \(f^{0.8}\, Q^{1.7} \, \Psi^{1.7}\) & \(f^{-0.2}\, Q^{1.1} \, \Psi^{1.7}\)\\
 Subaerial (\(\alpha=0.5\)) & \(f^{0.7}\, Q^{0.8}\,  \Psi^{0.7}\) & \(f^{0.5}\, Q \,\,\,\, \Psi\) & \(f^{0.8}\, Q^{1.3} \, \Psi^{1.7}\) & \(f^{-0.2}\, Q^{1.0} \, \Psi^{1.7}\)\\
 Subaerial (\(\alpha=1\)) & \(f^{0.7}\, Q^{1.0}\,  \Psi^{0.7}\) & \(f^{0.5}\, Q \,\,\,\, \Psi\) & \(f^{0.8}\, Q^{0.7} \, \Psi^{1.7}\) & \(f^{-0.2}\, Q^{1.0} \, \Psi^{1.7}\)\\[3pt]
-R-ch. & \(f^{0.4}\, Q^{0.8} \, \Psi^{0.6}\) & \(f^{0.5}\, Q \,\,\,\, \Psi\) & \(f^{0.7}\, Q^{1.4}\, \Psi^{1.8}\) & \(f^{-0.2}\, Q^{1.0} \, \Psi^{1.7}\)\\
+R-channel & \(f^{0.4}\, Q^{0.8} \, \Psi^{0.6}\) & \(f^{0.5}\, Q \,\,\,\, \Psi\) & \(f^{0.7}\, Q^{1.4}\, \Psi^{1.8}\) & \(f^{-0.2}\, Q^{1.0} \, \Psi^{1.7}\)\\
 Pipe & \(f \,\quad Q^{2\phantom{.0}} \, S^{-1}\) & \(f^{1.5}\, Q^3 \, S^{-2.5}\) & \(f^{2.5}\, Q^{5\phantom{.0}}\, S^{-4.5}\) & \(f^{1.5} \,\,\,\,\, Q^{4.5} \, S^{-4.7}\)\\
 \end{tabular}
 \end{table}

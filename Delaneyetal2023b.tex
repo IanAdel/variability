@@ -474,16 +474,16 @@ G. King provided useful comments on a previous version of this manuscript.
     Name &Symbol&  Value&Units \\ \hline
     \textbf{Variables}  & & & \\
     Water discharge  & $Q$& & $\mathrm{m^{3}\,s^{-1}}$ \\
-    Water velocity (glacier, subaerial)  & $v_g,\,v_{f}$& & $\mathrm{m\,s^{-1}}$ \\
+    Water velocity (glacier, subaerial)  & $v$, ($v_g,\,v_{f}$)& & $\mathrm{m\,s^{-1}}$ \\
     Channel wetted area (glacier, subaerial) &  $S_g, S_f$& & $\mathrm{m^2}$     \\
-    Channel depth (subaerial) & &$H$& $\mathrm{m}$\\
+    Channel depth (subaerial) & $H$&& $\mathrm{m}$\\
     Hydraulic diameter &$D_h$&&$\mathrm{m}$\\
-    Width of channel floor (glacial, subaerial) & $w_g,w_f$&  & $\mathrm{m}$     \\
+    Width of channel floor (glacial, subaerial) & $w$, ($w_g,w_f$)&  & $\mathrm{m}$     \\
     Hydraulic head &$\Delta h$&& $\mathrm{m}$\\
     Hydraulic gradient &$\Psi=\frac{\Delta h}{l}$&& $\mathrm{m\, m^{-1}}$\\
 
-    Shear stress (glacier, subaerial) & $\tau_g,\,\tau_f$&& $\mathrm{Pa \, m^{-2}}$ \\
-    Width-integrated shear stress (glacier, subaerial) & $\tau_{tg},\, \tau_{tf}$&& $\mathrm{Pa \, m^{-1}}$ \\
+    Shear stress (glacier, subaerial) & $\tau$, ($\tau_g,\,\tau_f$) && $\mathrm{Pa \, m^{-2}}$ \\
+    Width-integrated shear stress (glacier, subaerial) \mauro{get rid of this} & $\tau_{tg},\, \tau_{tf}$&& $\mathrm{Pa \, m^{-1}}$\\
     Stream power & $\Omega$ && $\mathrm{ kg \, m\, s^{-3}}$ \\
 
          &&&\\
@@ -618,7 +618,7 @@ Table~\ref{tab:Qs2} shows how the proxy $w\tau$ as well as $Q_s$ of the MPM, EH 
 Remarkably, the Bagnold formula has a negative exponent for $f$ in all but the pipe-flow regime, which seems rather unexpected.
 The total transport formula EH gives a slightly stronger dependence on all variables as should be expected due to the larger exponent on $\tau$ of $\frac{5}{2}$ versus  $\frac{3}{2}$  for the others.
 Albeit, the sediment transport response in pipe-flow for the Bagnold case is close to EH.
-Conversely, the sediment transport proxy $w_g\,\tau_{g}, w_f\,\tau_{f}$ used within this publication scales only as $Q^2$ for pipe-flow, whereas the others scale at least with $Q^3$.
+Conversely, the sediment transport proxies $w_g\,\tau_g$ \& $w_f\,\tau_f$ used within this publication scale only as $Q^2$ for pipe-flow, whereas the transport scales at least with $Q^3$.
 The exponent for the width scaling $\alpha$ only impacts relationship between sediment transport and water discharge in the EH relation in any meaningful way.
 However, for the value of $\alpha$ around $\frac{1}{2}$ (a value appropriate for most streams), the exponent on $Q$ for EH is only slightly above what the other transport relations give.
 

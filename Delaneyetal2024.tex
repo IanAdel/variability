@@ -1,4 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % AGUJournalTemplate.tex: this template file is for articles formatted with LaTeX
 %
 % This file includes commands and instructions
@@ -64,28 +64,38 @@
 
 \correspondingauthor{Ian Delaney}{ianarburua.delaney@unil.ch}
 
-change subglacial hydraulics to subglacial model outputs??
+%\ian{only glaciers with subglacial channels... }
 
 \begin{keypoints}
 \item Short term water discharge variations in subglacial channels are mainly accommodated by water velocity, not channel size.
 \item Greater variability in water velocity causes sediment transport capacity to vary more in subglacial channels than in subaerial channels.
-\item Water discharge may represent processes including proglacial sediment mobilization and sediment access driving variations in sediment discharge, as opposed to subglacial sediment transport capacity in glacierized catchments. \mauro{I don't understand this sentence.}
+\item Results suggest that significant sediment transport capacity can persist across a range of water discharge conditions, and timing of peak events occurs under different hydrological conditions.
 \end{keypoints}
 
-\begin{abstract}  Sediment transport capacity in subglacial and subaerial channels depends on  water velocity and channel width, which together control the total shear stress exerted on the channel bottom.
-  In subaerial channels water discharge variations are accommodated largely by changes in flow depth and width.
+\begin{abstract}
+  Sediment transport capacity in both subaerial and subglacial channels depends on the shear stress exerted across the channel bottom, which vary with the  water velocity and channel width.
+  In subaerial channels, water discharge variations are accommodated largely by changes in flow depth and width.
   While in subglacial channels, water discharge changes primarily affect water velocity due to slow-evolving channel geometry.
-  Parameterizations of these subglacial and subaerial hydraulics are applied to hydrographs from an Alpine glacier and the Greenland Ice Sheet revealing greater variability in the inferred sediment transport capacity in subglacial than in subaerial channels.
-  Results show that high subglacial sediment transport rates can occur across a wide range of water discharges.
-  Slowly evolving channel width accommodates some variability in subglacial channels. \mauro{not sure what that sentence should do}
-  Despite differences in response to water discharge, sediment discharge measurements generally correlate better with subaerial hydraulic parameters.
-  This implies that other factors like sediment access or proglacial processes might be at play that affect sediment transport capacity differently in subglacial and subaerial channels.
+  Hydrographs from an Alpine glacier and the Greenland Ice Sheet are applied to models of subglacial and subaerial hydraulics, revealing greater variability in the inferred sediment transport capacity in subglacial than in subaerial channels.
+  Results also show that high subglacial sediment transport rates can occur across a wide range of water discharges.
+  However, slowly evolving channel width accommodates some variability in subglacial channels, compared to subaerial channels.
+  These findings are discussed in the context of understanding sediment discharge from glaciers with different hydrological forcings and assumptions of channel type.
 \end{abstract}
+
+\section*{Plain Language Summary} % 200 words
+Sediment export from glaciers impacts downstream ecosystems and communities and it has been documented to change in response to climate warming and glacier retreat.
+In these catchments, sediment export depends in part on the sediment transport capacity of water flowing below the glacier, or the amount of sediment that could be transported given the abundance of sediment.
+This capacity largely depends on the width of the channel and the water's velocity. 
+Unlike subaerial channels, like rivers, where the size of the river changes rapidly with respect to water discharge, however, subglacial channels are pressurized by the ice above.
+This pressurized flow means that channel size evolves slowly compared to the variations in water discharge, therefore variations in water discharge are largely accommodated by variations in velocity.
+Models of these processes show that sediment transport capacity is highly variable in subglacial channels, and a wide range of water discharges can result in comparable sediment transport capacity.
+In subaerial channels, by contrast, sediment transport capacity is less variable and depends on a single water discharge quantity.
+The channel's different response to water discharge may impact the interpretation of sediment transport records and responds to the type of hydrological forcing applied.
 
 \section{Introduction}
 \label{sect:intro}
 
-Changes in glacier dynamics, geomorphology, and hydrology  have prompted numerous  recent studies of  sediment transport processes in cold regions \cite<e.g.>{zhang2022}.
+Changes in glacier dynamics and hydrology  have prompted numerous  recent studies of  sediment transport processes in cold regions \cite<e.g.>{zhang2022}.
 Increases in sediment transport  have been observed in Greenland \cite{bendixen2017}, the European Alps \cite{costa2017}, the Himalayas \cite{li2021}, and the Andes \cite{vergara2022}.
 In some regions, increased water discharge and glacier melt have been interpreted to yield greater sediment transport capacity \cite{bendixen2017,costa2017,li2021}.
 Observed changes to sediment transport in glacierized catchments require examining the processes controlling sediment discharge in these catchments and its variations with water discharge  \cite<e.g.>{riihimaki2005,swift2005}.
@@ -99,30 +109,27 @@ The shear stress $\tau$ responds to the velocity of water $v$ flowing through th
 \begin{linenomath*}
   \begin{equation}
     \label{eq:tau}
-    \tau_t \propto w\,v^2.
+    \tau \propto v^2.
   \end{equation}
 \end{linenomath*}
-\mauro{I removed the width from here as I found it odd to introduce that here.}
 %
-Following mass conservation, the velocity of the water flowing through a  channel is
+Following mass conservation, the mean velocity of the water flowing through a  channel is
 \begin{linenomath*}
   \begin{equation}
     \label{eq:v}
     v = \frac{Q}{S},
   \end{equation}
 \end{linenomath*}
-where $Q$ is water discharge,  and $S$ is the channel's wetted area. \mauro{I find it odd to have formulas in the Intro}
+where $Q$ is water discharge,  and $S$ is the channel's wetted area. 
 
 In subaerial channels, operating with open channel flow, the wetted area $S$ of the channel evolves with changing water discharge $Q$, by changing both the channel's width and the water depth \cite{leopold1953}.
 The change in water depth results in a commensurate increase in water velocity.
-%Thus,  fulfilling Equation~\ref {eq:v}, the higher discharge is accommodated by both an increase in wetted area and flow velocity. \mauro{not needed}
 As a result, the shear stress $\tau$ increases according to Equation~\ref{eq:tau}.
 
 The response of water velocity to changing water discharge in subglacial channels differs from subaerial ones.
 The size of subglacial channels responds to the creep closure of the ice above and the opening of the channel by melting due to frictional heating of water flowing through the channel \cite{rothlisberger1972}.
 As a result, the subglacial channel size only evolves relatively slowly over days to months, whereas water discharge can vary over hours \cite<e.g.>{iken1986,andrews2014,nanni2020}.
 Therefore, on short time scales, subglacial water flow behaves more like pipe flow and changes in water discharge $Q$ are mainly accommodated with increased or decreased water velocity $v$ \cite{alley1997} because the size of the channel $S$ changes on a much longer timescale (Equation~\ref{eq:v} and Figure~\ref{fig:cartoon}).
-%It follows that an increase in water discharge $Q$ will cause the shear stress across the channel $\tau_t$ to respond with water velocity $v$, as opposed to subaerial channels where channel width $w$ evolves as well.
 
   \begin{figure}[h]
   \centering
@@ -131,58 +138,52 @@ Therefore, on short time scales, subglacial water flow behaves more like pipe fl
       Water velocity magnitudes in the subglacial, $v_g$, and subaerial, $v_f$, channels are shown by arrow length.
       $S_g$ and $S_f$ represent the wetted area in subglacial and subaerial channels, respectively.
       The subglacial channel widths $w_g$ remain unchanged, while the subaerial channel widths $w_f$ evolve. Shear stress $\tau$ is responsible for the mobilization of sediment.
-      %Note that in the subaerial channel parameterization, channels have rectangular shapes with their width much larger than their depth (Section~\ref{sect:fluv}).
-\mauro{Needs renaming $w_{cg/f}$ to $w_{g/f}$. Then, I find the downward arrow confusing.  Maybe just leave away? Also, I would write $\tau_f$ and $\tau_g$, it's ok to not have the width integrated tau here (and maybe we remove $\tau_{tf}$ from the paper anyway...}
     }
     \label{fig:cartoon}
   \end{figure}
-% \ian{Come back to Daniel's comments}
 
 Consequently, sediment mobilization in subaerial and subglacial channels responds differently to changing water discharge.
 These differences are implicitly included in a wide range of available models that  quantify sediment transport in both subglacial and subaerial channels  \cite<e.g.>{walder1994,alley1997,tucker1997,creyts2013,delaney2019,hewitt2019,wickert2019}.
 The divergent response of changing water discharge on sediment mobilization capacity may well impact sediment dynamics at glacier margins where flow transitions from pressurized to open channel flow \cite<e.g.>{perolo2018}.
 Additionally, the variable response of sediment transport capacity to water discharge in the two systems may affect the interpretation of sediment transport records in glacial systems \cite<e.g.>{muller1968,richards2003,swift2005,ganti2016}.
 Yet, little work has examined the differing relationship between variations in water discharge and sediment discharge in subglacial and subaerial channels \cite{alley1997}.
-%Furthermore, thorough observations of water velocity and channel width in subglacial channels are limited and, to these authors' knowledge, not contrasted with subaerial conditions at the glacier margins. %\mauro{self-cite here?}
 
 This manuscript evaluates the relationship between sediment transport capacity and water discharge in subglacial channels and compares it to subaerial ones.
-Due to the absence of continuous measurements of subglacial and subaerial water velocity and channel morphology, numerical parameterizations of subglacial and subaerial hydraulics are utilized. \mauro{Aren't those things always parameterised, irrespective of whether there are measurements or not?}
-Parameterizations are applied to hydrological records from an Alpine glacier in Switzerland (Fieschergletscher) and  a land-terminating glacier in Greenland (Leverett Glacier).
-Our parameterizations' lumped nature isolates the disparity between water discharge and sediment transport capacity in subglacial systems, independent of the upstream drainage network and sediment access.
+Models of subglacial and subaerial hydraulics are used to quantify subglacial and subaerial water velocity and channel morphology.
+The models are applied to hydrological records from an Alpine glacier in Switzerland (Fieschergletscher) and  a land-terminating glacier in Greenland (Leverett Glacier).
+The  lumped nature of the models isolates the disparity between water discharge and sediment transport capacity in subglacial systems, independent of the upstream drainage network and sediment access.
 Outputs demonstrate differences in the relationships between  water discharge, channel geometry, and water velocity in the subglacial and subaerial channels.
-Furthermore, outputs are compared to sediment discharge data from these two catchments.
-The manuscript then uses the demonstrated differences between the two channel types to discuss the implications for interpreting the processes driving variability in records of sediment transport from glacierized catchments.
-\mauro{As stated in the general comments.  I'd rather use ``model'' than ``parameterization'' as the latter is, for me, something which is used in a model and not a model itself.}
+The manuscript then uses the demonstrated differences between the two channel types to discuss the implications for interpreting the processes driving variability in records of sediment transport, and their relationship with hydrology from glacierized catchments.
 
 \section{Study sites and data}
 \label{sect:ss_data}
 
-Water and suspended sediment data are leveraged from Alpine and ice sheet settings.
+
+
+Water discharge data is leveraged from Alpine and ice sheet settings collected downstream of the glacier, assuming that no water storage occurred in the proglacial area.
 The Alpine site (\alpine) is  Fieschergletscher in the Swiss Alps ($46^\circ\,29'\,07''$ N, $8^\circ\,08'\,3''$ E).
-Water discharge and suspended sediment concentration were collected here at a $1$\unit{min} interval continuously over the period 2014--2021.
+Water discharge was collected here at a $1$\unit{min} interval continuously over the period 2014--2021.
 See \citeA{felix2022} and \citeA{felix2021} for more details.
 
 The Leverett Glacier in Greenland (\icesheet) serves as the ice sheet setting.
-Water discharge and suspended sediment concentration data were collected roughly $2$\unit{km} downstream from the terminus between June and August/September 2009 to 2012 ($67^\circ\,03'\,5''$ N, $50^\circ\,12'\,59''$ W).
-Data is used from \citeA{tedstone2017} and \citeA{hawkings2014} at a $5$\,\unit{min} time interval from May 28, 2012 to August 8, 2012.
-Two gaps (14.07.2012 to 15.07.2012 and 16.07.2012 to 17.07.2021) in suspended sediment data were interpolated using a linear spline.
+Water discharge was collected roughly $2$\unit{km} downstream from the terminus between June and August/September 2009 to 2012 ($67^\circ\,03'\,5''$ N, $50^\circ\,12'\,59''$ W).
+Data is used in \citeA{tedstone2017} and \citeA{hawkings2014} at a $5$\,\unit{min} time interval from May 28, 2012 to August 8, 2012.
 
 \section{Methods}
 \label{sect:meth}
-The parameterizations below (Sections ~\ref{sect:sub_mode}~and~\ref{sect:fluv}) represent relationships amongst water discharge, water velocity, and channel geometry in both subaerial and subglacial channels (Table \ref{table:vpm}).
-Both parameterizations calculate   water velocity, shear stress, and width-integrated shear stress, upon which sediment transport depends \cite<Figure \ref{fig:cartoon}; >{shields1936}.
+The models described below (Sections ~\ref{sect:sub_mode}~and~\ref{sect:fluv}) represent relationships amongst water discharge, water velocity, and channel geometry in both subaerial and subglacial channels (Table \ref{table:vpm}).
+Both models calculate   water velocity, shear stress, and width-integrated shear stress, upon which sediment transport depends \cite<Figure \ref{fig:cartoon}; >{shields1936}.
 The evaluation of these variables omits the selection of a sediment transport relationship and a grain-size parameter \cite<e.g.>{shields1936,meyer1948} needed to calculate sediment transport capacity from shear stress.
 
 
-\subsection{Subglacial channel  parameterization}
+\subsection{Subglacial channel  model}
 \label{sect:sub_mode}
 
-To evaluate the shear stress of water flowing across sediments underneath a glacier, the subglacial channel parameterization takes into account the channel geometry and the velocity of the flowing water.
+To evaluate the shear stress of water flowing across sediments underneath a glacier, the subglacial channel model accounts for the channel geometry and the velocity of the flowing water.
 To do this, a lumped hydraulics model \cite{clarke1996} modified from the one presented by \citeA{werder2010b} is used.
 
 Here, it is assumed that the water is transported through a subglacial channel \cite<Figure~\ref{fig:cartoon}; >{rothlisberger1972}, and that the channel  size responds to melt due to frictional heating from water flow and to creep closure of the ice, using the Darcy-Weisbach formulation for water-flow through a pipe  \cite<e.g.>{rothlisberger1972,clarke2003}.
 The formulation here does not consider the englacial storage of water.
-Thus, it is assumed that the changing hydraulic head at the top of the glacier is negligible in the channel size evolution \mauro{I don't understand this sentence}.
 The evolution of subglacial channel size $S_g$ is given as
 \begin{linenomath*}
   \begin{equation}
@@ -201,7 +202,7 @@ Following the Darcy-Weisbach equation, the head drop $\Delta h$ is
     \Delta h \,  = l \,\frac{1}{2g} \,f_r\,\frac{v_g^2}{D_h},
   \end{equation}
 \end{linenomath*}
-\noindent where $f_r$ is a friction factor, $D_h$ is the hydraulic diameter, $l$ is the length over which head change occurs, and $v_g=Q/S_g$ is the water flow speed.
+\noindent where $f_r$ is a friction factor, $D_h$ is the hydraulic diameter, $l$ is the length over which head change occurs, and $v_g=\frac{Q}{S_g}$ is the water flow speed.
 %
 The hydraulic diameter $D_h$ is converted to wetted area $S_g$ with
 \begin{equation}
@@ -212,25 +213,21 @@ where $\beta$ is the central angle of the circular segment that comprises the ch
 %
 The shear stress, $\tau_g$, between the water and the channel bed is determined through the Darcy-Weisbach formulation
 \begin{equation}
-  \label{eq:tau}
+  \label{eq:tau_g}
   \tau_g=\frac{1}{8}\,f_r\,\rho_w\,v_g^2,
 \end{equation}
 %
 where $v_g = \frac{Q}{S_g}$ is the water velocity.
 %
-The width-integrated shear stress is represented as
-\begin{equation}
-  \label{eq:tautg}
-  \tau_{tg}=w_g\,\tau_g,
-\end{equation}
-where  channel floor width $w_g$ is
+The width of the channel floor $w_g$ is represented as
 \begin{equation}
   \label{eq:dh2wc}
   w_g = 2  \sin \frac{\beta}{2} \sqrt{\frac{2\, S_g}{\beta -\sin \beta}}.
 \end{equation}
-\mauro{If we get rid of $\tau_{tf}$, above needs a bit of massaging.  I'd then move the $w_g$ eq to just after the $S_g$ eq.}
+%
+This value is used to establish the integrated shear stress across the channel, $w_g\tau_g$.
 
-\subsection{Subaerial channel  parameterization}
+\subsection{Subaerial channel  model}
 \label{sect:fluv}
 
 % To parameterize the shear stress of water flowing across sediments in the subaerial channel, the hydraulics parameterization presented in \citeA{tucker1997} is implemented.
@@ -239,10 +236,10 @@ the shear stress $\tau_f$ at the river bed is
 \begin{linenomath*}
   \begin{equation}
     \label{eq:DW_tau}
-    \tau_f=\frac{\rho_w\,g^{\frac{2}{3}}\,f_p^{\frac{1}{3}}}{2}\, \Big(\frac{Q}{w_f} \Big)^{\frac{2}{3}} \,\nabla z_c^{\frac{2}{3}},
+    \tau_f=\frac{\rho_w\,g^{\frac{2}{3}}\,f_f^{\frac{1}{3}}}{2}\, \Big(\frac{Q}{w_f} \Big)^{\frac{2}{3}} \,\nabla z_c^{\frac{2}{3}},
   \end{equation}
 \end{linenomath*}
-where $\nabla z_c$ is the channel slope, and $f_p$ is the friction factor for subaerial channels \cite{tucker1997}.
+where $\nabla z_c$ is the channel slope, and $f_f$ is the friction factor for subaerial channels \cite{tucker1997}.
 Channel width $w_f$ is
 \begin{equation}
   \label{eq:wcf}
@@ -250,46 +247,42 @@ Channel width $w_f$ is
 \end{equation}
 %
 where $k$ is a constant and $\alpha=\frac{1}{2}$ is a commonly chosen exponent \cite{leopold1953}.
-Water velocity, $v_f$, is given by rearranging Equation \ref{eq:tau} as
+Water velocity, $v_f$, is given by rearranging Equation \ref{eq:tau_g} as
 \begin{equation}
   \label{eq:vf}
-  v_f = \sqrt{\frac{8\,\tau_f}{f_p\,\rho_w}}.
+  v_f = \sqrt{\frac{8\,\tau_f}{f_f\,\rho_w}}.
 \end{equation}
 %
-As above, the width-integrated shear stress is
-\begin{equation}
-    \label{eq:tautf}
-    \tau_{tf}=w_f\,\tau_f.
-  \end{equation}
+As above, the width-integrated shear stress is $w_f\tau_f$.
 
-  Note that the subaerial channel model \mauro{or ``parameterization''} is a purely algebraic model, whereas the subglacial model comprises a differential equation for the evolution of $S_g$ and thus will have a history dependence on the discharge.
+Note that this subaerial channel model is purely algebraic, whereas the subglacial model comprises a differential equation for the evolution of $S_g$.
+Thus the models have a history dependence on the discharge $Q_w$.
 
 \subsection{Implementation}
 \label{sect:imp}
 
-\mauro{I would call the ``cases'' ``scenarios'' instead.  The word ``scenario'' does not appear in the manuscript so far, so it would be unambiguous.  Also, ``cases'' has the disadvantage that ``In both cases,'' is a saying, and thus it is confusing.  I implemented this change.}
-
-The parameterizations above are applied to hydrological records from the Fieschergletscher (scenario \alpine) and the Leverett Glacier (scenario \icesheet).
-The subglacial and subaerial parameterizations represent the subglacial flow of water exiting a glacier and transitioning to subaerial flow.
-Outputs of the parameterizations represent generalizable sediment transport characteristics from these hydrographs, rather than actual hydraulic conditions.
+The models above are applied to hydrological records from the Fieschergletscher (scenario \alpine) and the Leverett Glacier (scenario \icesheet).
+The subglacial and subaerial models represent the subglacial flow of water exiting a glacier and transitioning to subaerial flow.
+Outputs of the models represent generalizable sediment transport characteristics from these hydrographs, rather than actual hydraulic conditions.
 To generalize these scenarios, \alpine{}  is exemplified by relatively thin ice thickness ($h_{ice}$: $225$\,\unit{m}), low water discharge ($\sim\,10$\,\unit{m}$^3$\,\unit{s}$^{-1}$) and high diurnal variability in water discharge (Figure~\ref{fig:model_outs}, a).
 \icesheet{}  is exemplified by thick ice  ($h_{ice}$: $700$\,\unit{m}), high water discharge ($\sim\,300$\,\unit{m}$^3$\,\unit{s}$^{-1}$)  and low diurnal variability in water discharge (Figure~\ref{fig:model_outs}, e).
 %
 However, both scenarios share a discharge with a similar, relative seasonal amplitude.
 
-For each glacier, the parameterizations are first applied to a reference test case for each glacier that assumes  a subglacial channel with $\beta=\frac{\pi}{2}$, i.e. a segment of a quarter-circle.
-Friction factors $f_r$ and $f_p$ are tuned so that the parameterizations reproduce reasonable water velocities for both \alpine and \icesheet{}\cite<$\sim\,1.6\,$\unit{m}$^3$\,\unit{s}$^{-1}$>{werder2010b,chandler2013}.
-\mauro{Those $f$ reported in the table are super large!  Maybe an issue down the line...}
-The subaerial channels of both scenarios have a bed slope of $\nabla z_c = 0.05$ \mauro{Why do you report a value here but most are hidden in the table?  Maybe just ref the table?}.
-% Water velocity, shear stress, and width-integrated shear stress in the subglacial and subaerial channels from this formulation are presented below.
+For each glacier, the models are first applied to a reference test case for each glacier that assumes  a subglacial channel with $\beta=\frac{\pi}{6}$, i.e. a segment of a quarter-circle, (Table~\ref{table:vpm}).
+Friction factors $f_r$ and $f_f$ are tuned so that reasonable water velocities occur for both \alpine and \icesheet{}\cite<$\sim\,1.6\,$\unit{m}$^3$\,\unit{s}$^{-1}$>{werder2010b,chandler2013}.
+The subaerial channels of both scenarios have a bed slope of $\nabla z_c = 0.05$ (Table~\ref{table:vpm}).
 
-Second, to further characterize the variability in sediment discharge capacity in subglacial compared to subaerial channels, $100$  parameter combinations are applied to a range of different channel geometry factors ($\beta$ and $k$) and friction factors ($f_r$ and $f_p$). \mauro{So how many runs are actually run?  Not clear.}
-Runs with parameter combinations are culled if their mean subglacial water velocity over the season lies outwith $0.75$\,\unit{m}$^3$\,\unit{s}$^{-1}$ and $2$\,\unit{m}$^3$\,\unit{s}$^{-1}$ or if subaerial water velocity lies outwith $0.3$\,\unit{m}$^3$\,\unit{s}$^{-1}$ and $1.2$\,\unit{m}$^3$\,\unit{s}$^{-1}$, in accordance with measurements \cite<e.g.>{werder2010b,magnusson2012,chandler2013} \mauro{Awkward sentence.  (also note that ``cull'' means to remove, thus I changed ``between'' to ``outwith''.}.
-The variability of output is represented by the  standard deviation of that output over the course of the season \mauro{This sentence needs context.  What is variability used for?}.
+A second experiment aims to further characterize the variability in sediment discharge capacity in subglacial compared to subaerial channels across a range channel shapes, friction factors and water discharge variability. 
+To accomplish this, the water discharge records are aggregated across a select time period in the past ranging from $15$\,\unit{min} up to $15$\,\unit{days}, and the model is run with random  parameter combinations of channel geometry factors ($\beta$ and $k$) and friction factors ($f_r$ and $f_f$).
+Runs with parameter combinations are accepted if their mean subglacial water velocity over the season lies between $0.75$\,\unit{m}$^3$\,\unit{s}$^{-1}$ and $2$\,\unit{m}$^3$\,\unit{s}$^{-1}$ or if subaerial water velocity lies between $0.3$\,\unit{m}$^3$\,\unit{s}$^{-1}$ and $1.2$\,\unit{m}$^3$\,\unit{s}$^{-1}$, in accordance with measurements \cite<e.g.>{werder2010b,magnusson2012,chandler2013}.
+The routine runs until $100$ different parameter combinations are accepted from each water discharge aggregation period.
+The variability of an output, a key difference between the subaerial and subglacial systems, is represented by  its  standard deviation over the course of the season.
 
-Lastly, outputs of $w\tau$ are compared with the sediment discharge records of the glaciers using Spearman rank correlation, dependent on the ordering of values.
+The results below present water velocity ($v_g$, $v_f$), shear stress ($\tau_g$, $\tau_f$), and width-integrated shear stress ($w_g\tau_g$, $w_f\tau_f$) from the subglacial and subaerial models.
+For brevity in the text these values together are referred to as ``model outputs''.
+Lastly, outputs  are compared with the water discharge from glaciers using Spearman rank correlation, dependent on the ordering of values.
 Rank correlation reduces the impact of the non-linear response of sediment transport capacity to the hydrological forcing, thus making our interpretation independent of the exact details of the sediment transport formula.
-Outputs and observations, which have a $15$\,\unit{min} resolution, are aggregated across time intervals of up to $15$\,\unit{days} by averaging values over a symmetric window of corresponding size.
 
 \section{Results}
 
@@ -297,55 +290,51 @@ Outputs and observations, which have a $15$\,\unit{min} resolution, are aggregat
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.9\linewidth]{Fig2.pdf}
-  \caption{Parameterization outputs from the hydrographs n panels a and e for \alpine scenarios (a-d) and \icesheet{} (e-h).
+  \caption{Model outputs from the hydrographs n panels a and e for \alpine scenarios (a-d) and \icesheet{} (e-h).
     Gray (black) lines in a and e represent the subglacial channel size (water discharge).
     Blue lines represent outputs from the subglacial channel, while orange lines represent the subaerial channel.
     Data are shown at $15$\unit{min} intervals, i.e. not aggregated.
-    Arrows denote where variables peaking in the subglacial channel prior to the subaerial one \mauro{wouldn't this need more zoomed-in plots?}.
+    Arrows denote where variables peaking in the subglacial channel prior to the subaerial one.
     Insets in e-h show the  peak melt event \icesheet{} denoted by the shaded area in panel e.
     % Note that the x and y axes are different for \alpine{} and \icesheet{}.
-        \mauro{Wrong units! Shear stress is Pa\,m$^{-2}$ and width integrated Pa\,m$^{-1}$}
   }
   \label{fig:model_outs}
 \end{figure}
 
-\mauro{Good para}
-Following the parameterizations defined in Sections~\ref{sect:sub_mode}~and~\ref{sect:fluv}, the water velocity, shear stress, and width-integrated shear stress exhibit different seasonal evolutions and peaks.
+Following the models defined in Sections~\ref{sect:sub_mode}~and~\ref{sect:fluv}, the water velocity, shear stress, and width-integrated shear stress exhibit different seasonal evolutions and peaks.
 Water velocity and shear stress represent the potential for sediment mobilization, and width-integrated shear stress represents a proxy for the total sediment transport capacity across the channel bed (Figure~\ref{fig:model_outs}).
-
-\mauro{In principle good paragraph, the meat.  But suffers from sloppy writing.}
-In the subglacial channel, peaks in $w_g\tau_g$ generally occur when water discharge increases at the fastest rate (Figure~\ref{fig:model_outs}d,h).
-In contrast, in the subaerial channel,   $w_g\tau_g$  peaks when water discharge is highest.
-The timing of the greatest rate of change in water discharge occurs before the peaks in water discharge \mauro{what?}.
-Furthermore, the subglacial outputs \mauro{What are ``outputs''?}  are generally larger than the subaerial values, thus more efficient at transporting sediment.
-Here, sediment could be deposited in the proglacial area as the water depressurizes, then remobilized when sediment transport capacity peaks in the subaerial system \mauro{not sure this tangent is worth taking in this paragraph}.
+Furthermore, the subglacial hydraulic outputs are generally larger than their subaerial equivalents , thus greater sediment transport capacity would be expected in subglacial channels compared to subaerial ones.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.9\linewidth]{Fig3.png}
   \caption{
     Relationship between water discharge and velocity, shear stress, and width-integrated shear stress for \alpine{} (a-c) and \icesheet (d-f).
-    These outputs' relationship with measured sediment discharge is given for \alpine in (g-i) and \icesheet (j-l).
+    %These outputs' relationship with measured sediment discharge is given for \alpine in (g-i) and \icesheet (j-l).
     Variables on the x-axis have been normalized to mean values.
     $R_g$ and $R_f$ show the Spearman rank correlations for the subglacial and the subaerial outputs, respectively.
     Plots are shown with data and outputs at $15$\unit{min} intervals.
-    \mauro{Pixely, needs more resolution, at least 2x. The two dots in the legend are not visible.  I would add ``Measured'' to the two y-labels.}
+    %\mauro{Pixely, needs more resolution, at least 2x. The two dots in the legend are not visible.  I would add ``Measured'' to the two y-labels.}
   }
   \label{fig:Qw_vari}
 \end{figure}
 
-In the subaerial system there is no history dependence and thus each water discharge value in the subaerial channel results in a unique water velocity, shear stress, and width-integrated shear stress, creating a perfect rank correlation between the variables (Figure~\ref{fig:Qw_vari} a--f).
+In examining the relationship between water discharge and the model outputs, different relationship emerges between the subaerial and subglacial cases.
+Because there is no history dependence in  subaerial channels, each water discharge value in the subaerial channel results in a unique water velocity, shear stress, and width-integrated shear stress (Section~\ref{sect:sub_mode}).
+This characteristic results in a perfect rank correlation between the variables (Figure~\ref{fig:Qw_vari} a--f).
+In the subglacial channel, however, the hysteresis in channel size evolution (Equation~\ref{eq:dS_dt}) means that subglacial model outputs respond differently to water discharge than subaerial ones.
+Here, the persistence of high water velocity, shear stress, and width-integrated shear stress across a range of water discharges suggests that substantial sediment transport may occur under a wide range of hydrological forcings (Figure~\ref{fig:Qw_vari} a--f).
 
-\mauro{it feels this sentence should be in the same para as the previous one.  But not sure what it tries to say.}
-In the subglacial channel, however, the persistence of high water velocity, shear stress, and width-integrated shear stress across a range of discharges suggests that substantial sediment transport may occur across \mauro{across what?} (Figure~\ref{fig:Qw_vari} a--f).
-
-
-
-For instance, very high  water velocity values and shear stresses can occur across minimal water discharge at $2.5$\,\unit{m}$^3$\,\unit{s}$^{-1}$ to the maximum water discharge at over $17$ \,\unit{m}$^3$\,\unit{s}$^{-1}$.
-In \icesheet, mean values \mauro{what ``mean''?} of water velocity can occur at water discharges between roughly $150$ \,\unit{m}$^3$\,\unit{s}$^{-1}$ and $310$ \,\unit{m}$^3$\,\unit{s}$^{-1}$.
+For instance in \alpine, very high water velocity values and shear stresses can occur at a minimal water discharge  ($\sim\,4$\,\unit{m}$^3$\,\unit{s}$^{-1}$) to the maximum water discharge at over ($17$ \,\unit{m}$^3$\,\unit{s}$^{-1}$, Figure~\ref{fig:Qw_vari}\,a).
+In \icesheet, mean values water velocity over the season can occur at water discharges between roughly $150$ \,\unit{m}$^3$\,\unit{s}$^{-1}$ and $310$ \,\unit{m}$^3$\,\unit{s}$^{-1}$.
 When considering the subglacial channel's evolving width, width-integrated shear stress  across the channel generally increases with water discharge, with improved rank correlation compared to water velocity or shear stress (\alpine, Figure~\ref{fig:Qw_vari} a--f).
 Yet even the width-integrated shear stress  can vary substantially, with the highest values occurring at water discharge values ranging from roughly $11$ \,\unit{m}$^3$\,\unit{s}$^{-1}$ to over $17$ \,\unit{m}$^3$\,\unit{s}$^{-1}$.
-The variability in width-integrated shear stress is less pronounced in the \icesheet scenario, with reduced variability in water discharge (Figure~\ref{fig:Qw_vari} c, f).
+The variability in width-integrated shear stress is less pronounced in the \icesheet scenario, where the hydrograph has less diurnal variability in water discharge (Figure~\ref{fig:Qw_vari} c, f).
+
+The different response of subaerial and subglacial model outputs to water discharge impacts the timing of peak events.
+In the subglacial channel, peaks in $w_g\tau_g$ generally occur when water discharge increases at the fastest rate, but before the maximum quantity of water discharge (Figure~\ref{fig:model_outs}\, d and h).
+By contrast, in the subaerial channel,   $w_f\tau_f$  peaks when water discharge is highest.
+
 
 \begin{figure}[h]
   \centering
@@ -355,33 +344,21 @@ The variability in width-integrated shear stress is less pronounced in the \ices
       Solid lines denote  mean values.
       %Top row shows results from the \alpine{} scenario, while bottom row show outputs from the \icesheet{} scenario
       Time intervals shown with markers denote $15$\,\unit{min}, $1$\,\unit{hr}, $12$\,\unit{hr}, $1$\,\unit{d}, $5$\,\unit{d}, $10$\,\unit{d}, and $15$\,\unit{d} aggregation periods.
-      Text in columns shows rank correlation between the variable and sediment discharge for the corresponding time period for the subglacial (left column) and subaerial (right column) channels.
-      \mauro{Again units are wrong as in Fig 2.
-        I would add \alpine and \icesheet labels to the plots; and for sure that needs to be stated in the caption.
-        It's a bit confusing to have the rank-correlations here as well as they are not on the variability but just on the variable themselves... not sure what to do though. } }
+       }
     \label{fig:multi_run}
   \end{figure}
 
+The second numerical experiment aims to evaluate the role of channel shape and friction factors on the findings above.
 Across the range of channel shape parameters and friction factors  examined, variability in water velocity and shear stress remains higher in the subglacial system compared to the subaerial one.
-In \alpine{}, the variability in width-integrated shear stress is comparable between the two systems, due to the variable water discharge (Figure~\ref{fig:multi_run}).
-
+In \alpine{}, the variability in width-integrated shear stress is comparable between the subaerial and subglacial systems, due to the highly variable water discharge, particularly over diurnal time periods (Figure~\ref{fig:multi_run}).
 However, in \icesheet{}, with lower water discharge fluctuations, the variability in width-integrated shear stress remains higher in the subglacial system across the time aggregation periods.
+Together these findings suggest that sediment transport capacity variations over a melt season can be comparable in subaerial and subglacial systems if substantial variability persists in the hydrological forcing. 
 
-\mauro{this paragraph needs more motivation: why are we looking at this?}
-It is prescient \mauro{I don't think that works ``to have foresight''} to evaluate the time scales over which the subglacial channels may respond to changing water discharge to understand the influence of variability in sediment transport capacity.
-In both scenarios, the variability in velocity, shear stress, and width-integrated shear stress decreases with aggregations longer than approximately 1--5 days (Figure~\ref{fig:multi_run}).
+Evaluating the different variability in sediment transport characteristics across timescales can help inform the sediment transport processes omitted from daily or week values of water discharge.
+Results from  both \alpine and \icesheet scenarios show that the variability in velocity, shear stress, and width-integrated shear stress decreases with aggregations longer than approximately 1--5 days (Figure~\ref{fig:multi_run}).
 Yet, substantial differences in variability persist in periods of up to $15$ days.
 Aggregations periods longer than this might be conflated with seasonal variations in water discharge and are thus omitted.
-Note that lags and time of peak sediment transport conditions still occur over these periods (Figure~\ref{fig:model_outs}), while the variability in sediment transport parameters decreases with larger time aggregation (Figure~\ref{fig:multi_run}) \mauro{not clear sentence}.
-
-
-\subsection{Relationship between parameterization  outputs and observed sediment discharge}
-\mauro{Not sure a separate section is needed for this one paragraph.}
-
-When comparing the outputs with suspended sediment discharge measurements, the subaerial parameterizations generally correlate better with sediment discharge compared to subglacial outputs across the tested parameters (Figures~\ref{fig:Qw_vari} g--l and \ref{fig:multi_run}).
-The rank correlation amongst the subaerial parameterization's outputs remains fairly constant despite the variable impact of channel shape and consistent scaling with water discharge (Figure \ref{fig:Qw_vari} and Section~\ref{sect:fluv}).
-In subglacial channels, velocity and shear stress perform substantially worse in terms of rank correlation with sediment discharge compared to width-integrated shear stress (Figures~ \ref{fig:multi_run}).
-In both \alpine{} and \icesheet{}, the subglacial rank correlation approaches that of subaerial channels over longer time aggregation periods (Figures~ \ref{fig:multi_run} and \ref{fig:model_outs_1hr} to \ref{fig:model_outs_15day}).
+Note that lags and time of peak sediment transport conditions still occur over these periods, and these characteristics are thus note considered in aggregating outputs and water discharge over longer time periods (Figure~\ref{fig:model_outs}).
 
 
 \section{Discussion}
@@ -391,84 +368,89 @@ In both \alpine{} and \icesheet{}, the subglacial rank correlation approaches th
 Quantities that relate to sediment transport capacity (water velocity, shear stress, and width-integrated shear stress) vary differently in response to water discharge in subglacial channels compared to subaerial ones (Figure~\ref{fig:Qw_vari}).
 In sediment transport relationships that evaluate sediment discharge capacity, such as in \citeA{meyer1948} or \citeA{engelund1967}, shear stress is scaled to the power of $\frac{3}{2}$ or $\frac{5}{2}$, respectively.
 The exponent greater than $1$ magnifies sediment discharge variability beyond the variable sediment transport parameters described above (Figure~\ref{fig:multi_run}; Table~\ref{tab:Qs}).
-Note that sediment transport relationships describe sediment flux per unit width, so that the integrated capacity across channel occurs after application of the exponent, unlike the width-integrated shear stress evaluation here \cite<Equations\,\ref{eq:tautg} and \ref{eq:tautf}; c.f.>{tucker1997} \mauro{sentence does not parse; I think you should state limitations of width integrated shear stress and then be done with it.}.
-%Note also that both subglacial and subaerial parameterizations here assume that the distribution of velocity and shear stress is homogeneous across the channel bed, despite the limitations of this assumption \cite<e.g.>{yager2018}.
 
-\mauro{This paragraph needs rewriting.  I guess I should do that.}
-The rapid increases and decreases in subglacial sediment transport capacity compounds the variability in sediment transport already present in subaerial systems \cite<Figure~\ref{fig:Qw_vari}; >{williams1989,jerolmack2010}.
+In R-channel models, viable water pressure regimes can be achieved by changing the shape and friction factor of the channels, enabling assumptions of semi-circular channels in most applications \cite{werder2010}.
+However, the role of channel width in the findings here suggests that more thorough parameterization of channel shape and channel width is needed in assessing subglacial sediment transport capacity (Section\ref{sect:sub_mode}, \ref{sect:scaling}).
+Note as well that sediment transport relationships describe sediment flux per unit width, so that the integrated sediment transport capacity across channel occurs after application of the exponent, unlike the width-integrated shear stress evaluation here \cite<c.f.>{tucker1997}.
+
 Sediment transport capacity in subglacial channels responds more rapidly to changes in water discharge compared to their subaerial counter parts \cite{alley1997}.
 In subglacial R\"othlisberger channels in steady state with respect to water discharge the width-integrated shear stress response to water discharge is $ \tau_{tg}\, \propto\,  Q^{\sim\frac{4}{5}}$ (Table\,\ref{tab:eqs1}).
 However, subglacial channels rarely operate in a steady state \cite<e.g.>{gimbert2016}.
 For sufficiently short time periods, channel width and wetted area are fixed in the subglacial system (akin to pipe flow) so that the response of width-integrated shear stress is $ \tau_{tg}\, \propto\,  Q^{2}$ (Table\,\ref{tab:eqs1}).
 \ref{sect:scaling} provides a complete description of sediment transport capacity in different drainage conditions.
 
-\mauro{You often use ``subglacial hydraulics''.  I'm not sure what that means. For instance in the next sentence.  Isn't discharge part of hydraulics too?  Maybe you could define a bunch of equations as the subglacial hydraulic model and subaerial hydraulic model and then talk of that?}
-%
-The stronger correlation between subglacial hydraulics and water discharge in \icesheet{} (Figure~\ref{fig:Qw_vari}\,a-f) could result from the channel being closer to equilibrium between variations in the channels' wetter area and water discharge with smaller diurnal variations in amplitude (Figures~\ref{fig:model_outs} and ~\ref{fig:Qw_vari}) \mauro{needs rewriting}.
-Conversely, the correlation between hydraulics and water discharge in \alpine is smaller due to the relatively larger discharge variations on short time scales.
-In both scenarios, the variability in subglacial channels approaches that of subaerial ones  over $1-5$ days (Figure~\ref{fig:multi_run}), suggesting a parity between the two channel types might be approached over this period.
-
-In subglacial channels, peaks in water velocity, shear stress and width-integrated shear stress occur with  fast rates of water discharge increase relative to the channel's growth rate (Figure~\ref{fig:model_outs}).
-In turn, subglacial channels grow with increasing water discharge, effectively reducing sediment transport capacity with the stabilization of water discharge at its peak.
-Similar feedback occurs in subaerial systems \cite{phillips2016}, albeit at timescales longer than days in the subglacial system.  
-
-\subsection{Effect of variable sediment transport capacity on sediment discharge  from glaciers}
-\mauro{This section header sounds like this will be about measurements only.}
-
-\mauro{I find this confusing.  The measurements are sediment discharge, so how can they be represent by hydraulic outputs?  Maybe talk of sediment discharge proxy ($w\tau$) or some such?  Or use something establishing a less direct link than ``representing''.}
-The increased performance of subaerial hydraulics outputs, compared to subglacial ones, in representing observations occurs despite the proximity of measurement locations to these glaciers (Figure~\ref{fig:Qw_vari}).
-This could occur for two reasons.
-
-First, these measurement stations lie $0.5$ to $2$\,\unit{km} downstream of the glacier terminus \cite{cowton2012,felix2022}, a long enough distance for the pressurized subglacial regime to transition to the open channel subaerial one.
-The transition of subglacial to subaerial conditions typically occur still underneath glacier but close to the terminus \cite{perolo2018}, where closure rates of the subglacial channels are slow and open channel flow condition prevail \cite{rothlisberger1972}.
-Furthermore, if abundant sediment persists in the proglacial area, then it can be easily mobilized, and subaerial processes could be represented just a short distance downstream \mauro{Not sure what that sentence means}.
-
-\mauro{I perceived this paragraph pretty out of the blue.}
 The consistent relationship between sediment discharge capacity in  open channel flow conditions could be pronounced $\sim20$\,\unit{km} downstream of the Leverett site, where a strong correlation persists between sediment plume size and the river's water discharge into the Kangerlussuaq fjord \cite{mcgrath2010}.
 In contrast, in marine-terminating glacier catchments a less consistent relationship may occur between water discharge or melt extent and sediment plume size \cite{tedstone2012}.
 Here, ocean water pressurizes subglacial channels at the ice front \cite<e.g.>{how2017}, so the minimal correlation could result from the inconsistent relationship between subglacial sediment transport capacity and water discharge (Figure~\ref{fig:Qw_vari}).
 
-Second, the sediment discharge records could represent processes such as increased sediment accessibility when melt extends up the glacier, thereby increasing sediment and water discharge \cite<e.g.>{vergara2022}.
-A supply-limited regime could well persist at many glaciers, because the sediment's threshold of motion can be reached more frequently and across a range of water discharges, compared to subaerial systems (Figure~\ref{fig:Qw_vari}).
-Sediment exhaustion occurring through increased variability may also explain the stronger dependence of sediment discharge from the Greenland Ice Sheet on basal shear stress, a proxy for bedrock erosion, rather than glacier melt \cite{overeem2017}.
-Note, however, the absence of lags between the observed sediment and water discharge (Figure~\ref{fig:model_outs}\, a and e) may suggest that sediment is mobilized close to the measurement stations, as opposed to distal areas of the glacier bed as would be expected in a supply-limited regime \cite{williams1989}.
-
-Regardless of the increased performance of water discharge compared to subglacial sediment transport capacity in representing the observations,  suggest that additional processes and erosional hiatuses may further complicate signals of sediment discharge from glaciers in response to climate \cite{jansson2005,ganti2016}.
-Sediment discharge records have been used to establish the relationship, or lack thereof, between climate forcing and glacial erosion \cite<e.g.>{koppes2009a,ganti2016,willenbring2016,mariotti2021}.
-The variable relationship between water discharge and subglacial sediment transport capacity presented here mostly applies to the daily- to weekly-time scales controlling the size of subglacial channels (Figure~\ref{fig:multi_run}).
-Yet, identifying climatic effects in sediment transport from the transport-limited component of glacier-sedimentary systems may require higher thresholds of water discharge compared to subaerial systems when water discharge varies substantially over short timescales \cite<Figure~\ref{fig:Qw_vari}; >{tofelde2021}. \mauro{I don't understand the last two sentences.}
-
 Over time scales of weeks or longer, the glacier's sediment transport capacity is impacted by the ice thickness, controlling the channel closure rate, and the glacier's surface slope, in addition to water discharge \cite<Figure~\ref{fig:multi_run}, Section~\ref{sect:sub_mode}; >{rothlisberger1972,shreve1972,gimbert2016,stevens2022}.
 In a supply-limited state, often assumed in landscape evolution models, then glaciers' sediment discharge record are also impacted by the additional processes of sediment availability and bedrock erosion from  water pressure variations and sliding  \cite<e.g.>{iverson2012,herman2015,delaney2023}.
-This multitude of processes lies in contrast to processes occurring in most subaerial systems, where transport capacity typically responds to sediment size, water discharge, and hydraulic gradient, and the hydraulic gradient generally remains stable over time scales ranging from years to millennia \cite<Section~\ref{sect:fluv}; e.g.>{muller1968,tucker1997,wickert2019}.
+This multitude of processes lies in contrast to processes occurring in most subaerial channels, where transport capacity typically responds to sediment size, water discharge, and hydraulic gradient, and the hydraulic gradient generally remains stable over time scales ranging from years to millennia \cite<Section~\ref{sect:fluv}; e.g.>{muller1968,tucker1997,wickert2019}.
 The stronger link between sediment transport capacity and hydrological forcing in subaerial channels may mean that variations in sediment transport records can be more easily attributed to climatic conditions than in subglacial systems.
 
 
-\ian{move this shit up or delete}
-\subsection{Comparison of Alpine and Arctic hydrological forcing}
+In subglacial channels, peaks in water velocity, shear stress and width-integrated shear stress occur with  fast rates of water discharge increase relative to the channel's growth rate (Figure~\ref{fig:model_outs}).
+In turn, subglacial channels grow with increasing water discharge, effectively reducing sediment transport capacity with the stabilization of water discharge at its peak.
+Similar feedback occurs in subaerial channels \cite{phillips2016}, albeit at  timescales apparently longer than days in subglacial channels.  
+
+\subsection{Role of hydrological forcing}
+
+%\mauro{You often use ``subglacial hydraulics''.  I'm not sure what that means. For instance in the next sentence.  Isn't discharge part of hydraulics too?  Maybe you could define a bunch of equations as the subglacial hydraulic model and subaerial hydraulic model and then talk of that?}
+
+%\ian{make comment about lumped nature of model}
+
+Results point to the highly variable response of water discharge quantity to proxies for sediment transport capacity, yet substantial differences emerge between the \alpine{} and \icesheet{}.
+Indeed, the correlation between hydraulics and water discharge in \alpine is smaller compared to \icesheet due to the relatively larger discharge variations on daily to weekly timescales.
+This could occur as the evolution of the R-channel's size is small compared to the variations in water discharge.
+Such variability in alpine catchments may cause shear stress to be proportional to the water discharge squared \cite< \ref{sect:scaling}; c.f.>{alley1997}.
+In turn, a closer approximation of the hydraulics could be represented by pipe flow, where the channel size remains fixed.
+Conversely, the reduced variability in water discharge in \icesheet may result in the R-channel's size being closer to equilibrium with respect to the variations in water discharge.
+In this case, the exponent on water discharge with respect to shear stress is likely significantly less than $2$, but greater than $\frac{4}{5}$ that occurs when the R-channel's size evolves in equilibrium with water discharge (see \ref{sect:scaling}).
+As a result in the stronger correlation persists between subglacial model outputs and water discharge in \icesheet{} compared to \alpine (Figure~\ref{fig:Qw_vari}\,a-f).
+
+The hydrological forcing that could cause the greatest increases in subglacial sediment transport capacity may occur during glacier lake drainages or intense precipitation events \cite<e.g.>{cowan1988,delaney2018}.
+In these cases, massive amounts of sediment can be evacuated from the subglacial environment, due to increased sediment access, but also the large increases in sediment transport capacity.
+If water input prior to these events has been minimal, the channel size would be small and sediment transport capacity would very rapidly increase at the onset of the event (see \ref{sect:scaling}).
+
+
+
+The greater variations in subglacial sediment transport capacity in both catchment types compared to subaerial ones could cause a supply-limited regime to persist at many glaciers.
+This regime may persist as the sediment's threshold of motion can be reached more frequently and across a range of water discharges, compared to subaerial systems (Figure~\ref{fig:Qw_vari}).
+Sediment exhaustion occurring through increased variability may also explain the stronger dependence of sediment discharge from the Greenland Ice Sheet on basal shear stress, a proxy for bedrock erosion, rather than glacier melt \cite{overeem2017}.
+
+Water discharge measurement at the sub-hour timescale remain unavailable in many catchments and daily values might be used, for instance.
+The variability in subglacial channels approaches that of subaerial ones  over $1-5$ days (Figure~\ref{fig:multi_run}), possibly resulting in a parity between subaerial and subglacial channels over these periods.
+This suggests that aggregating water discharge over daily to weekly time periods could yield similar behavior between subglacial and subaerial systems. 
+At the same time, water discharge over such time periods, may omit key process, such as water velocity reaching sediments' threshold of motion more frequently or the timing of peak events.
 
 \section{Conclusions}
 
 The sediment transport capacity of a channel is driven by its width and the shear stress exerted by the flowing water, which, in turn, is proportional to the square of the flow velocity.
 Subaerial channels alter both their channel width and water velocity immediately in response to changing water discharge.
 In contrast, pressurized subglacial channels largely accommodate rapidly changing water discharge by altering water velocity.
-Their size, in contrast, responds over the course of several days to changes in discharge.
+Their size responds over the course of several days to changes in discharge.
 Thus the response of sediment transport capacity is much more sensitive to changes in water discharge in subglacial channels compared to subaerial ones.
-%Despite these differences, parameterizations of subaerial hydraulics in two glacierized catchments generally represent observed sediment discharge variations better than subglacial hydraulics \mauro{This sentence does not quite parse.  Why ``despite''?  Also state that we found this.}
 
 Implications of the presented findings include:
 \begin{enumerate}
 \item the changing relationship between water discharge and sediment transport capacity underneath glaciers creates larger variability in sediment transport capacity compared to river systems;
-\item the timing of peak sediment transport capacity below glaciers generally coincides with large rates of increase in water discharge, as opposed to the maximum water discharge, as would occur in pipe flow of a fixed size;
-\item the timing of peak sediment transport capacity in subaerial channels coincides with the maximum water discharge;
-\item a steady relationship between water and sediment discharge may represent subglacial sediment access or open channel hydraulics near the glacier margin, instead of subglacial sediment transport capacity.
+  \vspace{.1cm}
+  
+\item the timing of peak sediment transport capacity below glaciers generally coincides with large rates of increase in water discharge, as opposed to the maximum water discharge in subaerial channels;
+  \vspace{.1cm}
+  
+\item the degree of difference in sediment transport capacity variations between the two channels types depends on the water discharge variability in the hydrograph, which varies with geography and across timescales.
+  However, representing subglacial sediment transport capacity with either open-channel flow or pipe flow omits key subglacial sediment transport characteristics.
+  \vspace{.1cm}
+
+  \item the uneven response of subglacial sediment transport capacity to water discharge variations suggests different magnitude-frequency relationships occur in most subglacial channels compared to subaerial ones with similar hydrological forcings.
 \end{enumerate}
 
 \section*{Author Contributions}
 
 I.D. designed the study, developed, and implemented the model and experiments, and wrote the manuscript.
 A.J.T. helped interpret data from Leverett Glacier and provided guidance on experiment design.
-M.A.W. provided data from Fieschergletscher and added the relationship between shear stress and water discharge (see Sections~\ref{sect:dis_qsc} and \ref{sect:scaling}).
+M.A.W. provided data from Fieschergletscher and added the relationship between shear stress and water discharge (see \ref{sect:scaling}).
 D.F. provided data from Fieschergletscher.
 All authors provided  key inputs in writing and editing the manuscript.
 
@@ -480,8 +462,8 @@ Code and data will be uploaded to a permanent repository, with FAIR principles, 
 
 \acknowledgments
 
-SNSF Project No. PZ00P2\_202024 provided  funding for I. Delaney.
-A. Tedstone acknowledges funding from the European Research Council, award 818994 -- CASSANDRA.
+SNSF Project No. $\mathrm{PZ00P2}$\_$202024$ provided  funding for I. Delaney.
+A. Tedstone acknowledges funding from the European Research Council, award $818994$ -- CASSANDRA.
 G. King provided useful comments on a previous version of this manuscript.
 
 
@@ -495,7 +477,7 @@ G. King provided useful comments on a previous version of this manuscript.
   \centering
   \caption{Variables, parameters, and constants used in this work.
     Where two values are given, the first refers to  \alpine{}, a scenario from Fieschergletscher, and the second to a glacier marginal to the \icesheet{} a scenario from Leverett Glacier}
-  \tiny % TODO remove again
+  \small % TODO remove again
   \begin{tabular}{ l  c  c c }
     Name &Symbol&  Value&Units \\
     && (\alpine or \icesheet)\\
@@ -511,7 +493,6 @@ G. King provided useful comments on a previous version of this manuscript.
     Hydraulic gradient &$\Psi=\frac{\Delta h}{l}$&& $\mathrm{m\, m^{-1}}$\\
 
     Shear stress (subglacial, subaerial) & $\tau$, ($\tau_g,\,\tau_f$) && $\mathrm{Pa \, m^{-2}}$ \\
-    Width-integrated shear stress (subglacial, subaerial) \mauro{get rid of this} & $\tau_{tg},\, \tau_{tf}$&& $\mathrm{Pa \, m^{-1}}$\\
     Stream power & $\Omega$ && $\mathrm{ kg \, m\, s^{-3}}$ \\
 
          &&&\\
@@ -520,10 +501,11 @@ G. King provided useful comments on a previous version of this manuscript.
     Gravitational constant&$g$& $9.81$&$\mathrm{m\,s^{-2}}$\\
     Density of water & $\rho_w$& $1000$ & $\mathrm{kg\,m^{-3}}$ \\
     Density of ice & $\rho_i$& $900$ & $\mathrm{kg\,m^{-3}}$ \\
-    Hooke angle of channel & $\beta$ & $\frac{\pi}{2}$ & \unit{rad}\\
-    Glacier thickness &$h_{ice}$& $225$ or $700$  &\unit{m}\\
+    Hooke angle of channel & $\beta$ & $\frac{\pi}{6}$ & \unit{rad}\\
+    Friction factor (subglacial, subaerial) & ($f_r$, $f_f$) &$5,\,16$ or $3$ & $\mathrm{(-)}$ \\
+    Glacier thickness &$h_{ice}$& $225$ or $740$  &\unit{m}\\
     Effective glacier thickness &$h_o$&$\frac{\rho_i}{\rho_w} h_{ice}$  &\unit{m}\\
-    Effective glacier length &$l$& 7,000 or 26,000&\unit{m}\\
+    Effective glacier length &$l$& $7,000$ or $26,000$&\unit{m}\\
     Constant $1$ in Equation~\ref{eq:dS_dt} &$C_1$&$2.2\times10^{-5}$&\unit{m}$^{-1}$\\
     Constant $2$ in Equation~\ref{eq:dS_dt} &$C_2$&$3.7\times10^{-13}$&\unit{m}$^{-n}\,s^{-1}$\\
     Latent heat of fusion &$L$&$333.5 $&\unit{kJ\,kg}$^{-1}$\\
@@ -531,8 +513,7 @@ G. King provided useful comments on a previous version of this manuscript.
     Specific heat capacity of water &$c_p$&$4180$&\unit{J\,kg}$^{-1}$\unit{K}$^{-1}$\\
     Ice flow constant &$A$& $5.3\times10^{-24}$ &\unit{Pa}$^{-n}$\,$s^{-1}$\\
     Ice flow exponent &$n$& $3$ &$\mathrm{(-)}$\\
-    Friction factor (subglacial, subaerial)  \mauro{why not $f_g$ and $f_f$?} & $f_r$ &$10$ or $20$ & $\mathrm{(-)}$ \\
-    Friction factor (subaerial) & $f_p$ & $3$ & $\mathrm{(-)}$\\
+   
     Gradient of channel bed (subaerial) &$\nabla z_c$ &$0.05$& $\mathrm{(-)}$\\
     Subaerial channel factor & $k$ &$3$ or $6.5$ & $\mathrm{s\,m^{-2}}$\\
     Channel geometry exponent &$\alpha$& $\frac{1}{2}$&$\mathrm{(-)}$ \\
@@ -601,7 +582,7 @@ G. King provided useful comments on a previous version of this manuscript.
 \section{Formulas for sediment transport in different drainage regimes}
 \label{sect:scaling}
 
-\mauro{Notation: either use $h$ and $w$ for the river, or otherwise, somehow free $h$. Below I use $H$ and $W$ for now.}
+%\mauro{Notation: either use $h$ and $w$ for the river, or otherwise, somehow free $h$. Below I use $H$ and $W$ for now.}
 
 Here three kinds of drainage regimes are examined, namely, subaerial channels, steady-state R-channels \cite{rothlisberger1972}, and pipe-flow (i.e. R-channels which do not have time to adjust their size to discharge conditions).
 Here we show how sediment transport capacity scales with respect to a given water discharge and hydraulic gradient for three different transport formulas: Meyer-Peter M\"uller  \cite<MPM;>{meyer1948}, Engelund and Hansen \cite<EH;>{engelund1967}, and Bagnold \cite{bagnold1980}; additionally width-integrated shear stress is assessed, as used as proxy for sediment transport throughout the manuscript.
@@ -660,6 +641,7 @@ Thus fluctuations of discharge on short timescales (on the order of a day) have 
 
 \begin{table}
   \caption{Relations for hydraulic variables for the three drainage regimes:  subaerial channels, R-channel and pipe-flow.  Darcy-Weisbach equation is abbreviated with ``D-W'', and stream power with ``Stream p.''. }
+  \small
   \label{tab:eqs1}
 \begin{tabular}{llllll}
   Regime & Fixed & Determined via D-W
@@ -674,7 +656,8 @@ Pipe & \(S\) & \(\Psi \propto f \, Q^2\, S^{-5/2}\) & \(D_h\propto w \propto H \
 
 \begin{table}
   \caption{Sediment transport proxy ($w\tau$) and rates for the three considered different transport formulas: MPM \cite{meyer1948}, EH \cite{engelund1967}, and Bagnold \cite{bagnold1980}.
-    }
+  }
+  \small
   \label{tab:Qs}
 \begin{tabular}{lllll}
  & Width \(\times \,\, \tau\) & MPM & EH & Bagnold\\
@@ -688,7 +671,8 @@ Pipe & \(f \, Q^2 \, S^{-1}\) & \(f^{3/2}\, Q^3 \, S^{-5/2}\) & \(f^{5/2}\, Q^5\
 
 \begin{table}
   \caption{As Table~\ref{tab:Qs} but with the fractional exponents stated as rounded decimal numbers.  For the subaerial regime the exponents are for displayed for the likely width-exponent $\alpha=1$, as well as its end members 0 (slot canyon) and 1 (only width increases and not depth).
-    }
+  }
+  \small
   \label{tab:Qs2}
 \begin{tabular}{lllll}
  & Width \(\times \,\, \tau\) & MPM & EH & Bagnold\\
@@ -703,3 +687,11 @@ Pipe & \(f \,\quad Q^{2\phantom{.0}} \, S^{-1}\) & \(f^{1.5}\, Q^3 \, S^{-2.5}\)
 \end{table}
 
 \end{document}
+
+
+% Graveyard
+% Additionally uggest that additional processes and erosional hiatuses may further complicate signals of sediment discharge from glaciers in response to climate \cite{jansson2005,ganti2016}.
+% Sediment discharge records have been used to establish the relationship, or lack thereof, between climate forcing and glacial erosion \cite<e.g.>{koppes2009a,ganti2016,willenbring2016,mariotti2021}.
+% The variable relationship between water discharge and subglacial sediment transport capacity presented here mostly applies to the daily- to weekly-time scales controlling the size of subglacial channels (Figure~\ref{fig:multi_run}).
+% Yet, identifying climatic effects in sediment transport from the transport-limited component of glacier-sedimentary systems may require higher thresholds of water discharge compared to subaerial systems when water discharge varies substantially over short timescales \cite<Figure~\ref{fig:Qw_vari}; >{tofelde2021}. \mauro{I don't understand the last two sentences.}
+%Furthermore evaluating the different variability in sediment transport characteristics across timescales can help inform the sediment transport processes omitted from daily or week values of water discharge..

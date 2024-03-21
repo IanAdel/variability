@@ -96,7 +96,7 @@
   In subaerial channels, water discharge variations are accommodated largely by flow depth and width changes.
   In subglacial channels, water discharge changes primarily affect water velocity due to evolving channel geometry over hours to weeks.
   Hydrographs from an Alpine glacier and the Greenland Ice Sheet are used to drive subglacial and subaerial hydraulics models, revealing greater variability in the inferred sediment transport capacity in subglacial than in subaerial channels.
-  Results also show that high subglacial sediment transport rates and water velocities can occur across wide ranging water discharges.
+  Results also show that high subglacial sediment transport rates and water velocities can occur across wide-ranging water discharges.
   These findings are discussed in the context of understanding sediment discharge from glaciers with different hydrological forcings and assumptions of channel type.
 \end{abstract}
 
@@ -148,15 +148,15 @@ As a result, the shear stress $\tau$ increases according to Equation~\ref{eq:tau
 The response of water velocity to changing water discharge in subglacial channels differs from subaerial ones.
 The size of subglacial channels responds to the creep closure of the ice and the opening of the channel by melting due to frictional heating of water flowing through the channel \cite{rothlisberger1972}.
 As a result, the subglacial channel size only evolves relatively slowly over days to months, whereas water discharge can vary over hours \cite<e.g.>{iken1986,andrews2014,nanni2020}.
-Therefore, on short time scales, subglacial water flow behaves more like pipe flow and changes in water discharge $Q$ are mainly accommodated with increased or decreased water velocity $v$ \cite{alley1997} because the size of the channel $S$ changes on a much longer timescale (Equation~\ref{eq:v} and Figure~\ref{fig:cartoon}).
+Therefore, on short time scales, subglacial water flow behaves more like pipe flow, and changes in water discharge $Q$ are mainly accommodated with increased or decreased water velocity $v$ \cite{alley1997} because the size of the channel $S$ changes on a much longer timescale (Equation~\ref{eq:v} and Figure~\ref{fig:cartoon}).
 
   \begin{figure}[h]
   \centering
     \includegraphics[width=0.8\linewidth]{Fig1.pdf}
     \caption{Sketch for the different short time-scale responses of subglacial and subaerial channels to increased water discharge.
       Arrow length denotes Water velocity magnitudes in the subglacial, $v_g$, and subaerial, $v_f$, channels.
-      $S_g$ ($S_f$) represent the wetted area in subglacial (subaerial) channels.
-      The subglacial channel width $w_g$ remain unchanged, while the subaerial channel width $w_f$ evolves.
+      $S_g$ ($S_f$) represents the wetted area in subglacial (subaerial) channels.
+      The subglacial channel width $w_g$ remains unchanged, while the subaerial channel width $w_f$ evolves.
       Shear stress $\tau$ is responsible for the mobilization of sediment.
     }
     \label{fig:cartoon}
@@ -200,8 +200,8 @@ The evaluation of these variables omits the selection of a sediment transport re
 To evaluate the shear stress of water flowing across sediments underneath a glacier, the subglacial channel model accounts for the channel geometry and the velocity of the flowing water.
 To do this, we use a lumped hydraulics model \cite{clarke1996} modified from the one presented by \citeA{werder2010b}.
 
-Here, it is assumed that the water is transported through a subglacial channel \cite<Figure~\ref{fig:cartoon}; >{rothlisberger1972} beneath a glacier with length $l$, a flat bed and thickness $h_{ice}$.
-The channel  size responds to melt due to frictional heating from water flow and to creep closure of the ice, using the Darcy-Weisbach formulation for water-flow through a pipe  \cite<e.g.>{rothlisberger1972,clarke2003}.
+Here, it is assumed that the water is transported through a subglacial channel \cite<Figure~\ref{fig:cartoon}; >{rothlisberger1972} beneath a glacier with length $l$, with a flatbed and a mean thickness of $h_{ice}$.
+The channel  size grows from melt due to frictional heating from water flow and closes due to the creep  of the ice.
 The formulation here does not consider the englacial storage of water.
 The evolution of subglacial channel size $S_g$ is given as
 \begin{linenomath*}
@@ -276,7 +276,7 @@ Water velocity, $v_f$, is given by rearranging Equation \ref{eq:tau_g} as
 As above, the width-integrated shear stress is $w_f\tau_f$.
 
 Note that this subaerial channel model is purely algebraic, whereas the subglacial model comprises a differential equation for the evolution of $S_g$.
-Thus the subglacial model has a history dependence on the discharge $Q_w$.
+Thus the channel size in the subglacial model has a history dependence on the discharge $Q_w$.
 
 \subsection{Implementation}
 \label{sect:imp}
@@ -336,7 +336,7 @@ Furthermore, the subglacial model outputs are generally larger than their subaer
   \caption{
     Relationship between water discharge and normalized velocity, shear stress, and width-integrated shear stress for \alpine{} (a-c) and \icesheet{} (d-f).
     Variables on the x-axis have been normalized to mean values.
-    $R_g$ ($R_f$) show the Spearman rank correlations for the subglacial (subaerial) outputs.
+    $R_g$ ($R_f$) shows the Spearman rank correlations for the subglacial (subaerial) outputs.
     Plots are shown with discharge and outputs at $15$\unit{min} intervals.
   }
   \label{fig:Qw_vari}
@@ -411,7 +411,7 @@ As a result, a stronger correlation persists between subglacial model outputs an
 
 The stronger link between sediment transport capacity and water discharge in subaerial channels may mean that variations in sediment transport records can be more easily attributed to hydro-climatic conditions than in subglacial systems.
 A glacier's sediment transport capacity is impacted by the ice thickness controlling the channel closure rate, and the glacier's surface slope, in addition to water discharge and sediment size \cite<Figure~\ref{fig:multi_run}, Section~\ref{sect:sub_mode}; >{rothlisberger1972,shreve1972,gimbert2016,stevens2022,walder1994}.
-In a supply-limited state, then glaciers' sediment discharge record also responds to  sediment availability and bedrock erosion from  water pressure variations and sliding  \cite<e.g.>{iverson2012,herman2015,delaney2023}.
+In a supply-limited state, the glaciers' sediment discharge record also responds to  sediment availability and bedrock erosion from  water pressure variations and sliding  \cite<e.g.>{iverson2012,herman2015,delaney2023}.
 This multitude of processes lies in contrast to many subaerial channels, where transport capacity typically responds to sediment size, channel shape, water discharge, and hydraulic gradient.
 The hydraulic gradient and channel shape can remain stable over years to millennia \cite<Section~\ref{sect:fluv}; e.g.>{tucker1997,wickert2019}.
 
@@ -452,7 +452,7 @@ Implications of the presented findings include:
   \vspace{.1cm}
   
 \item the uneven response of sediment transport capacity to water discharge variations shows a different response and timing to periods of elevated water discharge in subglacial channels compared to subaerial ones.
-  However, representing subglacial sediment transport capacity with either open-channel flow or pipe flow neglects differences in timing.
+However, representing subglacial sediment transport capacity with either open-channel flow or pipe flow neglects differences in timing.
 \end{enumerate}
 
 \section*{Author Contributions}
@@ -461,7 +461,7 @@ I.D. designed the study, developed, and implemented the model and experiments, a
 A.J.T. helped interpret data from Leverett Glacier and provided guidance on experiment design.
 M.A.W. provided data from Fieschergletscher and added the relationship between shear stress and water discharge (see \ref{sect:scaling}).
 D.F. provided data from Fieschergletscher.
-All authors provided  key inputs in writing and editing the manuscript.
+All authors provided key inputs in writing and editing the manuscript.
 
 
 \section*{Open Research Section}

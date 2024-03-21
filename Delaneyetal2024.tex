@@ -86,9 +86,9 @@
 \correspondingauthor{Ian Delaney}{ianarburua.delaney@unil.ch}
 
 \begin{keypoints}
-\item Short-term water discharge variations in subglacial channels are mainly accommodated by water velocity, not channel size, as is the case in subaerial systems.
+\item Short water discharge fluctuations in subglacial channels are accommodated by water velocity, not channel size, as in subaerial systems.
 \item Greater variability in water velocity causes sediment transport capacity to vary more in subglacial channels than in subaerial channels.
-\item Results suggest that significant subglacial sediment transport capacity can persist across a range of water discharge conditions, and the timing of peak events occurs under different hydrological conditions.
+\item Significant subglacial sediment transport capacity can persist across a range of water discharges, impacting the  timing of peak events.
 \end{keypoints}
 
 \begin{abstract}
@@ -312,8 +312,6 @@ The routine runs until $100$ different parameter combinations are accepted for e
 
 
 \section{Results}
-
-\subsection{Role of water discharge in sediment transport capacity}
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.9\linewidth]{Fig2.pdf}
@@ -431,10 +429,10 @@ Numerical models of subglacial sediment transport generally apply classical para
 In these R-channel models, viable water pressure regimes can be achieved by changing the shape and friction factor of the channels, enabling assumptions of semi-circular channels in most applications \cite{werder2010b}.
 However, the role of channel width in the findings here suggests that more thorough parameterization of channel shape and channel width is needed in assessing subglacial sediment transport capacity as compared to water pressure (Section\,\ref{sect:sub_mode}, \ref{sect:scaling}).
 
-In applying these models to different climate scenarios, water discharge measurements at the sub-hour timescale remain unavailable in many catchments.
-The model outputs' variability in subglacial channels approaches that of subaerial ones  over $1-5$ days (Figure~\ref{fig:multi_run}), possibly resulting in parity between subaerial and subglacial channels over these periods.
-This suggests that aggregating water discharge over daily to weekly periods could yield similar variations between subglacial and subaerial systems, although generally steeper hydraulic gradients of glaciers may cause elevated sediment transport capacity there (Figure\,\ref{fig:model_outs}). 
-Yet, water discharge over periods longer than days may omit key processes, such as the time of peaks in sediment transport capacity (Figure~\ref{fig:model_outs}).
+Water discharge measurements at the sub-hour timescale remain unavailable in many catchments, further limiting the ability of subglacial  sediment transport models to capture certain events.
+The model outputs' variability in subglacial channels approaches that of subaerial ones over $1-5$ days of water aggregation time (Figure~\ref{fig:multi_run}), possibly resulting in parity in sediment transport capacity variations between subaerial and subglacial channels over these periods.
+However, generally steeper hydraulic gradients of glaciers may cause elevated sediment transport capacity in subglacial channels (Figure\,\ref{fig:model_outs}). 
+Even so, water discharge forcings aggregated over periods longer than days may omit key sediment discharge characteristics, such as the timing of peaks in sediment transport capacity (Figure~\ref{fig:model_outs}).
 
 \section{Conclusions}
 
@@ -449,11 +447,12 @@ Implications of the presented findings include:
 \item the changing relationship between water discharge and sediment transport capacity below glaciers creates larger variability in sediment transport capacity compared to river systems;
   \vspace{.1cm}
  
-\item  water discharge variability in the two hydrographs impacts subglacial sediment transport capacity variations;
+\item
+  water discharge variability in the two hydrographs impacts subglacial sediment transport capacity fluctuations;
   \vspace{.1cm}
   
 \item the uneven response of sediment transport capacity to water discharge variations shows a different response and timing to periods of elevated water discharge in subglacial channels compared to subaerial ones.
-  However, representing subglacial sediment transport capacity with either open-channel flow or pipe flow neglects variations in timing.
+  However, representing subglacial sediment transport capacity with either open-channel flow or pipe flow neglects differences in timing.
 \end{enumerate}
 
 \section*{Author Contributions}
@@ -481,7 +480,7 @@ G. King and M. J. Gevers provided useful comments on a previous version of this 
 \newpage
 
 \appendix
-\TODO{match Friction factor in appendix}
+
 \section{Table of variables, parameters and constants}
 \begin{table}[h]
   \centering
@@ -501,7 +500,6 @@ G. King and M. J. Gevers provided useful comments on a previous version of this 
     Width of channel floor (subglacial, subaerial) & $w$, ($w_g,w_f$)&  & $\mathrm{m}$     \\
     Hydraulic head &$\Delta h$&& $\mathrm{m}$\\
     Hydraulic gradient &$\Psi=\frac{\Delta h}{l}$&& $\mathrm{m\, m^{-1}}$\\
-
     Shear stress (subglacial, subaerial) & $\tau$, ($\tau_g,\,\tau_f$) && $\mathrm{Pa \, m^{-2}}$ \\
     Stream power & $\Omega$ && $\mathrm{ kg \, m\, s^{-3}}$ \\
 
@@ -512,7 +510,7 @@ G. King and M. J. Gevers provided useful comments on a previous version of this 
     Density of water & $\rho_w$& $1000$ & $\mathrm{kg\,m^{-3}}$ \\
     Density of ice & $\rho_i$& $900$ & $\mathrm{kg\,m^{-3}}$ \\
     Hooke angle of channel & $\beta$ & $\frac{\pi}{6}$ & \unit{rad}\\
-    Friction factor (subglacial, subaerial) & $f$, ($f_r$, $f_f$) &$5,\,16$ or $3$ & $\mathrm{(-)}$ \\
+    Friction factor (subglacial, subaerial) & $f$, ($f_r$, $f_f$) &$5$ or $16$, $3$ & $\mathrm{(-)}$ \\
     Glacier thickness &$h_{ice}$& $225$ or $740$  &\unit{m}\\
     Effective glacier thickness &$h_o$&$\frac{\rho_i}{\rho_w} h_{ice}$  &\unit{m}\\
     Effective glacier length &$l$& $7,000$ or $26,000$&\unit{m}\\

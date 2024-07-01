@@ -510,6 +510,7 @@ The second numerical experiment aims to quantify the sources of increased variab
 Variable relationships between model outputs and water discharge emerge for the subaerial and subglacial cases due to the hysteresis in channel size in the subglacial model (Equation~\ref{eq:dS_dt}).
 Because subaerial channels have no history dependence, each water discharge value in the subaerial channel produces a unique water velocity, shear stress, and width-integrated shear stress (Section~\ref{sect:sub_mode}).
 This characteristic results in a perfect rank correlation between the variables and water discharge (Figure~\ref{fig:Qw_vari}).
+An inconsistent relationship between subglacial model outputs and water discharge persists across the range of parameters examined in the ensemble runs (Figure S15).
 \begin{figure}[hbt!]
   \centering
   \includegraphics[width=0.9\linewidth]{Fig5.png}
@@ -561,7 +562,7 @@ Additionally, sediment access is not considered here.
 In reality, processes such as sediment access are highly important in controlling sediment export in glacierized catchments \citep[e.g.][]{herman2015,vergara2022}.
 Furthermore, meltwater can be distributed to flow through several adjacent conduits impacting the sediment transport capacity in each \citep[e.g.][]{werder2013,hewitt2019,delaney2023}.
 The lumped models used here make the comparison more direct by isolating the relationship between water discharge and sediment transport capacity in subglacial and subaerial systems. 
-However, they neglect more complex, yet important, spatially distributed processes. 
+However, they neglect more complex, yet important, spatially distributed processes. a
 
 Comparing model outputs between the subaerial and subglacial case is difficult due to the different gradients in the two systems, with the subglacial one being much steeper \citep{alley1997}.
 The water velocities are similar in both channel types (Figure~\ref{fig:model_outs}).
@@ -599,7 +600,7 @@ Indeed, the more decoupled and sporadic relationship between model outputs and w
 This occurs as the subglacial channel's size evolves slowly compared to the variations in water discharge.
 High water discharge variability in \alpine{} may cause shear stress to approach $Q^{2}$in assuming pipe-flow conditions where the water discharge varies largely compared to channel size \citep[Section \ref{sect:scaling}; c.f.][]{alley1997}.
 Conversely, the reduced variability in water discharge in \icesheet{} may result in the subglacial channel's size being closer to equilibrium from the smaller variations in water discharge.
-In this case, the exponent on water discharge for shear stress is likely substantially less than $2$, but greater than $\frac{4}{5}$ that occurs in a steady-state R-channel (see Section \ref{sect:scaling}).
+In this case, the exponent on water discharge for shear stress is likely substantially less than $w\tau \propto Q^2$, but greater than $w \tau \propto Q^{\frac{4}{5}}$ that occurs in a steady-state R-channel (see Section \ref{sect:scaling}).
 As a result, there is a stronger relationship between subglacial model outputs and water discharge in \icesheet{} (Figure~\ref{fig:Qw_vari}) and less variability model outputs in the \icesheet case (Figure~\ref{fig:multi_run}).
 
 \subsection{Interpreting sediment transport records from glacierized catchments with respect to water discharge}
@@ -639,7 +640,7 @@ Their size responds over several days to changes in discharge.
 Thus, sediment transport capacity is more sensitive to changes in water discharge in subglacial channels compared to subaerial ones.
 
 Concerning the manuscript's first objective,
-results demonstrate that sediment transport capacity variability is higher in subglacial channels with evolving size across a range of channel shapes and friction factors.
+results demonstrate that sediment transport capacity variability is high in subglacial channels with evolving size across a range of channel shapes and friction factors.
 Increased variability occurs even in environments where the water discharge has relatively small diurnal variations in the \icesheet case.
 Yet, elevated variability is especially strong with highly variable water discharge in the \alpine case.
 Increased noise in sediment transport capacity in evaluating hydro-climatic signals from sediment records in glacierized catchments needs further evaluation.
@@ -649,7 +650,7 @@ The manuscript's second objective is to establish if water discharge varies with
 Results here suggest that, even in a transport-limited subglacial system, in most systems, an incoherent relationship between water and subglacial sediment discharge could be expected.
 This presents a challenge in linking hydro-climatic conditions or events to sediment export from glaciers.
 Due to evolving subglacial channel size, the timing of peak sediment discharge capacity in subglacial channels occurs before peak water discharge during an event, whereas it is coincident in subaerial ones.
-Our analysis shows, however, that covariance between water discharge and sediment transport capacity could be possible when water discharge varies at a slower rate than subglacial channel size.
+Covariance between water discharge and sediment transport capacity could be possible when water discharge varies at a slower rate than subglacial channel size.
 In natural environments, this appears to often not be the case, except where basal melt dominates.
 
 The subglacial environment's few observations hindered our ability to quantify processes such as
@@ -665,7 +666,6 @@ This study calls for careful analysis when examining the relationship between se
   Data from Fieschergletscher have been previously published in \citet{delaney2024}.
   The code will be uploaded to a permanent repository, with FAIR principles pending acceptance of the paper.}
 
-
 \authorcontribution{
   I.D. designed the study, developed, and implemented the model and experiments, and wrote the manuscript.
   A.J.T. helped interpret findings from Leverett Glacier and guided experiment design.
@@ -674,8 +674,6 @@ This study calls for careful analysis when examining the relationship between se
   All authors provided key inputs in writing and editing the manuscript.} %% this section is mandatory
 
 \competinginterests{The authors declare no competing interests.} %% this section is mandatory even if you declare that no competing interests are present
-
-
 
 \begin{acknowledgements}
   SNSF Project No. $\mathrm{PZ00P2}$\_$202024$ provided  funding for I. Delaney.
